@@ -21,7 +21,7 @@
         <Button Content="𝅗𝅥" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="26" Height="26" FontSize="25" FontFamily="Linden Hill"/>
         <Button Content="𝅘𝅥" HorizontalAlignment="Left" Margin="45,45,0,0" VerticalAlignment="Top" Width="26" Height="26" FontFamily="Linden Hill" FontSize="25"/>
         <Button Content="𝅘𝅥𝅮" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Width="26" Height="26" Cursor="" FontFamily="Linden Hill" FontSize="25"/>
-        <Image HorizontalAlignment="Left" Height="607" VerticalAlignment="Top" Width="607" Margin="88,0,0,-169" Source="C:\Users\Corey\Documents\sheet.png" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2"/>
+        <Image HorizontalAlignment="Left" Height="607" VerticalAlignment="Top" Width="607" Margin="88,0,0,-169" Source="References\sheet.png" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2"/>
 
         <!-- ******************** Measure 1, Beat 1 *********************** -->
 
