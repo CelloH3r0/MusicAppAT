@@ -95,7 +95,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="References\sheet.png" />
+    <Folder Include="References\Fonts\" />
+    <Folder Include="References\Music\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="References\Images\wholenote.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="References\Images\halfnote.png" />
+    <Resource Include="References\Images\dottedhalfnote.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="References\Images\quarternote.png" />
+    <Resource Include="References\Images\dottedquarternote.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="References\Images\sheet.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
