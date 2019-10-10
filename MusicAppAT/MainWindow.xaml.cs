@@ -12,7 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-//using System.Runtime.InteropServices;
+using System.Windows.Resources;
+using System.Runtime.InteropServices;
+using Microsoft.Win32.SafeHandles;
 
 namespace MusicAppAT
 {
@@ -21,6 +23,8 @@ namespace MusicAppAT
     /// </summary>
     public partial class MainWindow : Window
     {
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -34,24 +38,35 @@ namespace MusicAppAT
 
         private void OnLoad(object sender, EventArgs e)
         {
-            //Console.WriteLine(GetMousePosition());
+            PlayMusic();
         }
-        /*
-        [DllImport("user32.dll")]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        internal static extern bool GetCursorPos(ref Win32Point pt);
+        public async void PlayMusic()
+        {
+            int marginSize = 150;
+            while (true)
+            {
+                await Task.Delay(5);
+                Thickness margin = musicSlider.Margin;
+                
+                margin.Left = marginSize;
+                musicSlider.Margin = margin;
+                marginSize++;
 
-        internal struct Win32Point
-        {
-            public Int32 X;
-            public Int32 Y;
-        };
-        public static Point GetMousePosition()
-        {
-            Win32Point w32Mouse = new Win32Point();
-            GetCursorPos(ref w32Mouse);
-            return new Point(w32Mouse.X, w32Mouse.Y);
+                if(marginSize==625 && margin.Top == 21)
+                {
+                    MessageBox.Show("End of Measure 1");
+                    margin.Top = 158;
+                    musicSlider.Margin = margin;
+                    marginSize = 150;
+                }
+                if (marginSize == 625 && margin.Top == 158)
+                {
+                    MessageBox.Show("End of Measure 2");
+                    marginSize = 150;
+                    margin.Left = marginSize;
+                    margin.Top = 21;
+                }
+            }
         }
-        */
     }
 }
