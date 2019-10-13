@@ -50,6 +50,32 @@ namespace MusicAppAT
             
         }
 
+        private void whole_Click(object sender, RoutedEventArgs e)
+        {
+            double length = 4;
+
+            
+        }
+        private void dothalf_Click(object sender, RoutedEventArgs e)
+        {
+            double length = 3;
+        }
+
+        private void half_Click(object sender, RoutedEventArgs e)
+        {
+            double length = 2;
+        }
+
+        private void dotquarter_Click(object sender, RoutedEventArgs e)
+        {
+            double length = 1.5;
+        }
+
+        private void quarter_Click(object sender, RoutedEventArgs e)
+        {
+            double length = 1;
+        }
+
         private void m1b1b2_Click(object sender, EventArgs e)
         {
             string position = "m1b1";
@@ -1021,30 +1047,6 @@ namespace MusicAppAT
         {
             string position = "m2b4and";
             string noteName = "f0";
-        }
-
-        private void whole_Click(object sender, RoutedEventArgs e)
-        {
-            double length = 4;
-        }
-        private void dothalf_Click(object sender, RoutedEventArgs e)
-        {
-            double length = 3;
-        }
-
-        private void half_Click(object sender, RoutedEventArgs e)
-        {
-            double length = 2;
-        }
-
-        private void dotquarter_Click(object sender, RoutedEventArgs e)
-        {
-            double length = 1.5;
-        }
-
-        private void quarter_Click(object sender, RoutedEventArgs e)
-        {
-            double length = 1;
         }
 
         private async void play_Click(object sender, RoutedEventArgs e)
