@@ -23,8 +23,6 @@ namespace MusicAppAT
     /// </summary>
     public partial class MainWindow : Window
     {
-
-
         public MainWindow()
         {
             InitializeComponent();
@@ -38,11 +36,34 @@ namespace MusicAppAT
 
         private void OnLoad(object sender, EventArgs e)
         {
-            PlayMusic();
+            
         }
         public async void PlayMusic()
         {
-            
+            int marginSize = 150;
+            while (true)
+            {
+                await Task.Delay(1);
+                Thickness margin = musicSlider.Margin;
+                
+                margin.Left = marginSize;
+                musicSlider.Margin = margin;
+                marginSize++;
+
+                if(marginSize==625 && margin.Top == 21)
+                {
+                    margin.Top = 158;
+                    marginSize = 150;
+                    musicSlider.Margin = margin;
+                }
+                if (marginSize == 625 && margin.Top == 158)
+                {
+                    marginSize = 150;
+                    margin.Left = marginSize;
+                    margin.Top = 21;
+                    musicSlider.Margin = margin;
+                }
+            }
         }
 
         public void OnClick()
@@ -1047,32 +1068,9 @@ namespace MusicAppAT
             double length = 1;
         }
 
-        private async void play_Click(object sender, RoutedEventArgs e)
+        private void play_Click(object sender, RoutedEventArgs e)
         {
-            int marginSize = 150;
-            while (true)
-            {
-                await Task.Delay(1);
-                Thickness margin = musicSlider.Margin;
-
-                margin.Left = marginSize;
-                musicSlider.Margin = margin;
-                marginSize++;
-
-                if (marginSize == 625 && margin.Top == 21)
-                {
-                    margin.Top = 158;
-                    marginSize = 150;
-                    musicSlider.Margin = margin;
-                }
-                if (marginSize == 625 && margin.Top == 158)
-                {
-                    marginSize = 150;
-                    margin.Left = marginSize;
-                    margin.Top = 21;
-                    musicSlider.Margin = margin;
-                }
-            }
+            PlayMusic();
         }
     }
 }
