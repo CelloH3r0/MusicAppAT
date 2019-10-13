@@ -8,19 +8,19 @@
         Loaded="OnLoad"
         Title="MainWindow" MaxHeight="285" MinHeight="285" MinWidth="675" MaxWidth="675">
     <Grid Height="258" VerticalAlignment="Top">
-        <Button HorizontalAlignment="Left" Margin="16,15,0,0" VerticalAlignment="Top" Width="41" Height="41" FontSize="25" FontFamily="Microsoft Himalaya" Name="whole">
+        <Button HorizontalAlignment="Left" Margin="16,19,0,0" VerticalAlignment="Top" Width="41" Height="41" FontSize="25" FontFamily="Microsoft Himalaya" Name="whole">
             <Image Source="References\Images\wholenote.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="16,59,0,0" VerticalAlignment="Top" Width="41" Height="41" FontSize="25" FontFamily="Linden Hill">
+        <Button HorizontalAlignment="Left" Margin="16,107,0,0" VerticalAlignment="Top" Width="41" Height="41" FontSize="25" FontFamily="Linden Hill">
             <Image Source="References\Images\halfnote.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="16,103,0,0" VerticalAlignment="Top" Width="41" Height="41" FontSize="25" FontFamily="Linden Hill">
+        <Button HorizontalAlignment="Left" Margin="16,63,0,0" VerticalAlignment="Top" Width="41" Height="41" FontSize="25" FontFamily="Linden Hill">
             <Image Source="References\Images\dottedhalfnote.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="16,148,0,0" VerticalAlignment="Top" Width="41" Height="41" FontFamily="Linden Hill" FontSize="25">
+        <Button HorizontalAlignment="Left" Margin="16,197,0,0" VerticalAlignment="Top" Width="41" Height="41" FontFamily="Linden Hill" FontSize="25">
             <Image Source="References\Images\quarternote.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="16,193,0,0" VerticalAlignment="Top" Width="41" Height="41" Cursor="" FontFamily="Linden Hill" FontSize="25">
+        <Button HorizontalAlignment="Left" Margin="16,152,0,0" VerticalAlignment="Top" Width="41" Height="41" Cursor="" FontFamily="Linden Hill" FontSize="25">
             <Image Source="References\Images\dottedquarternote.png"/>
         </Button>
         <Image HorizontalAlignment="Left" Height="204" VerticalAlignment="Top" Width="573" Margin="72,25,0,0" Source="References\Images\sheet.png" RenderTransformOrigin="0.5,0.5"/>
@@ -250,7 +250,7 @@
         <Rectangle x:Name="m2b4andg0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,216,0,0" Opacity="0.75" StrokeThickness="0"/>
         <Rectangle x:Name="m2b4andf0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,222,0,0" Opacity="0.75" StrokeThickness="0"/>
         <Rectangle Name="musicSlider"  Fill="Black" HorizontalAlignment="Left" Height="69" VerticalAlignment="Top" Width="5" Margin="149,21,0,0"/>
-        
+
         <Image x:Name="m1bar1pb1" HorizontalAlignment="Left" Height="22" Margin="174,6,0,0" VerticalAlignment="Top" Width="13" />
         <Image x:Name="m1bar1pb2" HorizontalAlignment="Left" Height="22" Margin="234,6,0,0" VerticalAlignment="Top" Width="13" />
         <Image x:Name="m1bar1pb3" HorizontalAlignment="Left" Height="22" Margin="290,6,0,0" VerticalAlignment="Top" Width="13" />
@@ -267,6 +267,6 @@
         <Image x:Name="m1bar4pb2" HorizontalAlignment="Left" Height="22" Margin="466,141,0,0" VerticalAlignment="Top" Width="13" />
         <Image x:Name="m1bar4pb3" HorizontalAlignment="Left" Height="22" Margin="522,141,0,0" VerticalAlignment="Top" Width="13" />
         <Image x:Name="m1bar4pb4" HorizontalAlignment="Left" Height="22" Margin="583,141,0,0" VerticalAlignment="Top" Width="13" />
-        
+
     </Grid>
 </Window>
