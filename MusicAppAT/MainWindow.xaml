@@ -6,252 +6,224 @@
         xmlns:local="clr-namespace:MusicAppAT"
         mc:Ignorable="d"
         Loaded="OnLoad"
-        Title="MainWindow" MaxHeight="285" MinHeight="285" MinWidth="675" MaxWidth="675">
+        Title="MainWindow" MaxHeight="300" MinHeight="300" MinWidth="675" MaxWidth="675">
     <Grid Height="258" VerticalAlignment="Top">
-        <Button HorizontalAlignment="Left" Margin="16,19,0,0" VerticalAlignment="Top" Width="41" Height="41" FontSize="25" FontFamily="Microsoft Himalaya" Name="whole">
+        <Button HorizontalAlignment="Left" Margin="16,44,0,0" VerticalAlignment="Top" Width="41" Height="41" FontSize="25" FontFamily="Microsoft Himalaya" Name="whole" Click="whole_Click">
             <Image Source="References\Images\wholenote.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="16,107,0,0" VerticalAlignment="Top" Width="41" Height="41" FontSize="25" FontFamily="Linden Hill">
+        <Button HorizontalAlignment="Left" Margin="16,130,0,0" VerticalAlignment="Top" Width="41" Height="41" FontSize="25" FontFamily="Linden Hill" Name="half" Click="half_Click">
             <Image Source="References\Images\halfnote.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="16,63,0,0" VerticalAlignment="Top" Width="41" Height="41" FontSize="25" FontFamily="Linden Hill">
+        <Button HorizontalAlignment="Left" Margin="16,87,0,0" VerticalAlignment="Top" Width="41" Height="41" FontSize="25" FontFamily="Linden Hill" Name="dothalf" Click="dothalf_Click">
             <Image Source="References\Images\dottedhalfnote.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="16,197,0,0" VerticalAlignment="Top" Width="41" Height="41" FontFamily="Linden Hill" FontSize="25">
+        <Button HorizontalAlignment="Left" Margin="16,216,0,0" VerticalAlignment="Top" Width="41" Height="41" FontFamily="Linden Hill" FontSize="25" Name="quarter" Click="quarter_Click">
             <Image Source="References\Images\quarternote.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="16,152,0,0" VerticalAlignment="Top" Width="41" Height="41" Cursor="" FontFamily="Linden Hill" FontSize="25">
+        <Button HorizontalAlignment="Left" Margin="16,173,0,0" VerticalAlignment="Top" Width="41" Height="41" Cursor="" FontFamily="Linden Hill" FontSize="25" Name="dotquarter" Click="dotquarter_Click">
             <Image Source="References\Images\dottedquarternote.png"/>
         </Button>
         <Image HorizontalAlignment="Left" Height="204" VerticalAlignment="Top" Width="573" Margin="72,25,0,0" Source="References\Images\sheet.png" RenderTransformOrigin="0.5,0.5"/>
 
+        <Button Content="Play" HorizontalAlignment="Left" Margin="16,1,0,0" VerticalAlignment="Top" Width="41" Height="41" FontSize="18" FontFamily="Arial" x:Name="play" Click="play_Click" />
+
         <!-- ******************** Measure 1, Beat 1 *********************** -->
 
-        <Rectangle x:Name="m1b1b2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="156,21,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b1a2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="156,27,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b1g1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="156,33,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b1f1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="156,40,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b1e1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="156,46,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b1d1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="156,53,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b1c1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="156,59,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b1b1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="156,66,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b1a1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="156,72,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b1g0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="156,79,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b1f0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="156,85,0,0" Opacity="0.75" StrokeThickness="0"/>
+        <Button x:Name="m1b1b2" HorizontalAlignment="Left" Margin="156,21,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b1b2_Click"/>
+        <Button x:Name="m1b1a2" HorizontalAlignment="Left" Margin="156,27,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b1a2_Click"/>
+        <Button x:Name="m1b1g1" HorizontalAlignment="Left" Margin="156,33,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b1g1_Click"/>
+        <Button x:Name="m1b1f1" HorizontalAlignment="Left" Margin="156,40,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b1f1_Click"/>
+        <Button x:Name="m1b1e1" HorizontalAlignment="Left" Margin="156,47,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b1e1_Click"/>
+        <Button x:Name="m1b1d1" HorizontalAlignment="Left" Margin="156,53,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b1d1_Click"/>
+        <Button x:Name="m1b1c1" HorizontalAlignment="Left" Margin="156,60,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b1c1_Click"/>
+        <Button x:Name="m1b1b1" HorizontalAlignment="Left" Margin="156,67,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b1b1_Click"/>
+        <Button x:Name="m1b1a1" HorizontalAlignment="Left" Margin="156,73,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b1a1_Click"/>
+        <Button x:Name="m1b1g0" HorizontalAlignment="Left" Margin="156,79,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b1g0_Click"/>
+        <Button x:Name="m1b1f0" HorizontalAlignment="Left" Margin="156,85,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b1f0_Click"/>
 
-        <!-- ******************** Measure 1, Beat 1 and *********************** -->
+        <Button x:Name="m1b1andb2" HorizontalAlignment="Left" Margin="214,21,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b1andb2_Click"/>
+        <Button x:Name="m1b1anda2" HorizontalAlignment="Left" Margin="214,27,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b1anda2_Click"/>
+        <Button x:Name="m1b1andg1" HorizontalAlignment="Left" Margin="214,33,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b1andg1_Click"/>
+        <Button x:Name="m1b1andf1" HorizontalAlignment="Left" Margin="214,40,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b1andf1_Click"/>
+        <Button x:Name="m1b1ande1" HorizontalAlignment="Left" Margin="214,47,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b1ande1_Click"/>
+        <Button x:Name="m1b1andd1" HorizontalAlignment="Left" Margin="214,53,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b1andd1_Click"/>
+        <Button x:Name="m1b1andc1" HorizontalAlignment="Left" Margin="214,60,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b1andc1_Click"/>
+        <Button x:Name="m1b1andb1" HorizontalAlignment="Left" Margin="214,67,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b1andb1_Click"/>
+        <Button x:Name="m1b1anda1" HorizontalAlignment="Left" Margin="214,73,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b1anda1_Click"/>
+        <Button x:Name="m1b1andg0" HorizontalAlignment="Left" Margin="214,79,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b1andg0_Click"/>
+        <Button x:Name="m1b1andf0" HorizontalAlignment="Left" Margin="214,85,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b1andf0_Click"/>
 
-        <Rectangle x:Name="m1b1andb2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="214,21,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b1anda2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="214,27,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b1andg1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="214,33,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b1andf1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="214,40,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b1ande1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="214,46,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b1andd1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="214,53,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b1andc1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="214,59,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b1andb1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="214,66,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b1anda1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="214,72,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b1andg0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="214,79,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b1andf0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="214,85,0,0" Opacity="0.75" StrokeThickness="0"/>
+        <Button x:Name="m1b2b2" HorizontalAlignment="Left" Margin="272,21,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b2b2_Click"/>
+        <Button x:Name="m1b2a2" HorizontalAlignment="Left" Margin="272,27,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b2a2_Click"/>
+        <Button x:Name="m1b2g1" HorizontalAlignment="Left" Margin="272,33,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b2g1_Click"/>
+        <Button x:Name="m1b2f1" HorizontalAlignment="Left" Margin="272,40,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b2f1_Click"/>
+        <Button x:Name="m1b2e1" HorizontalAlignment="Left" Margin="272,47,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b2e1_Click"/>
+        <Button x:Name="m1b2d1" HorizontalAlignment="Left" Margin="272,53,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b2d1_Click"/>
+        <Button x:Name="m1b2c1" HorizontalAlignment="Left" Margin="272,60,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b2c1_Click"/>
+        <Button x:Name="m1b2b1" HorizontalAlignment="Left" Margin="272,67,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b2b1_Click"/>
+        <Button x:Name="m1b2a1" HorizontalAlignment="Left" Margin="272,73,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b2a1_Click"/>
+        <Button x:Name="m1b2g0" HorizontalAlignment="Left" Margin="272,79,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b2g0_Click"/>
+        <Button x:Name="m1b2f0" HorizontalAlignment="Left" Margin="272,85,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b2f0_Click"/>
 
-        <!-- ******************** Measure 1, Beat 2 *********************** -->
+        <Button x:Name="m1b2andb2" HorizontalAlignment="Left" Margin="330,21,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b2andb2_Click"/>
+        <Button x:Name="m1b2anda2" HorizontalAlignment="Left" Margin="330,27,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b2anda2_Click"/>
+        <Button x:Name="m1b2andg1" HorizontalAlignment="Left" Margin="330,33,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b2andg1_Click"/>
+        <Button x:Name="m1b2andf1" HorizontalAlignment="Left" Margin="330,40,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b2andf1_Click"/>
+        <Button x:Name="m1b2ande1" HorizontalAlignment="Left" Margin="330,47,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b2ande1_Click"/>
+        <Button x:Name="m1b2andd1" HorizontalAlignment="Left" Margin="330,53,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b2andd1_Click"/>
+        <Button x:Name="m1b2andc1" HorizontalAlignment="Left" Margin="330,60,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b2andc1_Click"/>
+        <Button x:Name="m1b2andb1" HorizontalAlignment="Left" Margin="330,67,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b2andb1_Click"/>
+        <Button x:Name="m1b2anda1" HorizontalAlignment="Left" Margin="330,73,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b2anda1_Click"/>
+        <Button x:Name="m1b2andg0" HorizontalAlignment="Left" Margin="330,79,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b2andg0_Click"/>
+        <Button x:Name="m1b2andf0" HorizontalAlignment="Left" Margin="330,85,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b2andf0_Click"/>
 
-        <Rectangle x:Name="m1b2b2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="272,21,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b2a2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="272,27,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b2g1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="272,33,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b2f1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="272,40,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b2e1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="272,46,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b2d1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="272,53,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b2c1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="272,59,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b2b1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="272,66,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b2a1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="272,72,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b2g0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="272,79,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b2f0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="272,85,0,0" Opacity="0.75" StrokeThickness="0"/>
+        <Button x:Name="m1b3b2" HorizontalAlignment="Left" Margin="388,21,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b3b2_Click"/>
+        <Button x:Name="m1b3a2" HorizontalAlignment="Left" Margin="388,27,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b3a2_Click"/>
+        <Button x:Name="m1b3g1" HorizontalAlignment="Left" Margin="388,33,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b3g1_Click"/>
+        <Button x:Name="m1b3f1" HorizontalAlignment="Left" Margin="388,40,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b3f1_Click"/>
+        <Button x:Name="m1b3e1" HorizontalAlignment="Left" Margin="388,47,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b3e1_Click"/>
+        <Button x:Name="m1b3d1" HorizontalAlignment="Left" Margin="388,53,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b3d1_Click"/>
+        <Button x:Name="m1b3c1" HorizontalAlignment="Left" Margin="388,60,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b3c1_Click"/>
+        <Button x:Name="m1b3b1" HorizontalAlignment="Left" Margin="388,67,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b3b1_Click"/>
+        <Button x:Name="m1b3a1" HorizontalAlignment="Left" Margin="388,73,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b3a1_Click"/>
+        <Button x:Name="m1b3g0" HorizontalAlignment="Left" Margin="388,79,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b3g0_Click"/>
+        <Button x:Name="m1b3f0" HorizontalAlignment="Left" Margin="388,85,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b3f0_Click"/>
 
-        <!-- ******************** Measure 1, Beat 2 and *********************** -->
+        <Button x:Name="m1b3andb2" HorizontalAlignment="Left" Margin="446,21,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b3andb2_Click"/>
+        <Button x:Name="m1b3anda2" HorizontalAlignment="Left" Margin="446,27,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b3anda2_Click"/>
+        <Button x:Name="m1b3andg1" HorizontalAlignment="Left" Margin="446,33,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b3andg1_Click"/>
+        <Button x:Name="m1b3andf1" HorizontalAlignment="Left" Margin="446,40,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b3andf1_Click"/>
+        <Button x:Name="m1b3ande1" HorizontalAlignment="Left" Margin="446,47,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b3ande1_Click"/>
+        <Button x:Name="m1b3andd1" HorizontalAlignment="Left" Margin="446,53,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b3andd1_Click"/>
+        <Button x:Name="m1b3andc1" HorizontalAlignment="Left" Margin="446,60,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b3andc1_Click"/>
+        <Button x:Name="m1b3andb1" HorizontalAlignment="Left" Margin="446,67,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b3andb1_Click"/>
+        <Button x:Name="m1b3anda1" HorizontalAlignment="Left" Margin="446,73,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b3anda1_Click"/>
+        <Button x:Name="m1b3andg0" HorizontalAlignment="Left" Margin="446,79,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b3andg0_Click"/>
+        <Button x:Name="m1b3andf0" HorizontalAlignment="Left" Margin="446,85,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b3andf0_Click"/>
 
-        <Rectangle x:Name="m1b2andb2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="330,21,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b2anda2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="330,27,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b2andg1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="330,33,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b2andf1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="330,39,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b2ande1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="330,46,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b2andd1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="330,53,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b2andc1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="330,59,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b2andb1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="330,66,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b2anda1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="330,72,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b2andg0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="330,79,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b2andf0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="330,85,0,0" Opacity="0.75" StrokeThickness="0"/>
+        <Button x:Name="m1b4b2" HorizontalAlignment="Left" Margin="504,21,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b4b2_Click"/>
+        <Button x:Name="m1b4a2" HorizontalAlignment="Left" Margin="504,27,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b4a2_Click"/>
+        <Button x:Name="m1b4g1" HorizontalAlignment="Left" Margin="504,33,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b4g1_Click"/>
+        <Button x:Name="m1b4f1" HorizontalAlignment="Left" Margin="504,40,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b4f1_Click"/>
+        <Button x:Name="m1b4e1" HorizontalAlignment="Left" Margin="504,47,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b4e1_Click"/>
+        <Button x:Name="m1b4d1" HorizontalAlignment="Left" Margin="504,53,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b4d1_Click"/>
+        <Button x:Name="m1b4c1" HorizontalAlignment="Left" Margin="504,60,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b4c1_Click"/>
+        <Button x:Name="m1b4b1" HorizontalAlignment="Left" Margin="504,67,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b4b1_Click"/>
+        <Button x:Name="m1b4a1" HorizontalAlignment="Left" Margin="504,73,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b4a1_Click"/>
+        <Button x:Name="m1b4g0" HorizontalAlignment="Left" Margin="504,79,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b4g0_Click"/>
+        <Button x:Name="m1b4f0" HorizontalAlignment="Left" Margin="504,85,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b4f0_Click"/>
 
-        <!-- ******************** Measure 1, Beat 3 *********************** -->
+        <Button x:Name="m1b4andb2" HorizontalAlignment="Left" Margin="562,21,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b4andb2_Click"/>
+        <Button x:Name="m1b4anda2" HorizontalAlignment="Left" Margin="562,27,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b4anda2_Click"/>
+        <Button x:Name="m1b4andg1" HorizontalAlignment="Left" Margin="562,33,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b4andg1_Click"/>
+        <Button x:Name="m1b4andf1" HorizontalAlignment="Left" Margin="562,40,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b4andf1_Click"/>
+        <Button x:Name="m1b4ande1" HorizontalAlignment="Left" Margin="562,47,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b4ande1_Click"/>
+        <Button x:Name="m1b4andd1" HorizontalAlignment="Left" Margin="562,53,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b4andd1_Click"/>
+        <Button x:Name="m1b4andc1" HorizontalAlignment="Left" Margin="562,60,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b4andc1_Click"/>
+        <Button x:Name="m1b4andb1" HorizontalAlignment="Left" Margin="562,67,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b4andb1_Click"/>
+        <Button x:Name="m1b4anda1" HorizontalAlignment="Left" Margin="562,73,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b4anda1_Click"/>
+        <Button x:Name="m1b4andg0" HorizontalAlignment="Left" Margin="562,79,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b4andg0_Click"/>
+        <Button x:Name="m1b4andf0" HorizontalAlignment="Left" Margin="562,85,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m1b4andf0_Click"/>
 
-        <Rectangle x:Name="m1b3b2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="388,21,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b3a2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="388,27,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b3g1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="388,33,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b3f1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="388,39,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b3e1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="388,46,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b3d1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="388,53,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b3c1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="388,59,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b3b1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="388,66,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b3a1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="388,72,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b3g0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="388,79,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b3f0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="388,85,0,0" Opacity="0.75" StrokeThickness="0"/>
+        <Button x:Name="m2b1b2" HorizontalAlignment="Left" Margin="156,158,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b1b2_Click"/>
+        <Button x:Name="m2b1a2" HorizontalAlignment="Left" Margin="156,164,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b1a2_Click"/>
+        <Button x:Name="m2b1g1" HorizontalAlignment="Left" Margin="156,170,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b1g1_Click"/>
+        <Button x:Name="m2b1f1" HorizontalAlignment="Left" Margin="156,177,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b1f1_Click"/>
+        <Button x:Name="m2b1e1" HorizontalAlignment="Left" Margin="156,184,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b1e1_Click"/>
+        <Button x:Name="m2b1d1" HorizontalAlignment="Left" Margin="156,190,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b1d1_Click"/>
+        <Button x:Name="m2b1c1" HorizontalAlignment="Left" Margin="156,197,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b1c1_Click"/>
+        <Button x:Name="m2b1b1" HorizontalAlignment="Left" Margin="156,204,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b1b1_Click"/>
+        <Button x:Name="m2b1a1" HorizontalAlignment="Left" Margin="156,210,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b1a1_Click"/>
+        <Button x:Name="m2b1g0" HorizontalAlignment="Left" Margin="156,216,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b1g0_Click"/>
+        <Button x:Name="m2b1f0" HorizontalAlignment="Left" Margin="156,222,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b1f0_Click"/>
 
-        <!-- ******************** Measure 1, Beat 3 and *********************** -->
+        <Button x:Name="m2b1andb2" HorizontalAlignment="Left" Margin="214,158,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b1andb2_Click"/>
+        <Button x:Name="m2b1anda2" HorizontalAlignment="Left" Margin="214,164,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b1anda2_Click"/>
+        <Button x:Name="m2b1andg1" HorizontalAlignment="Left" Margin="214,170,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b1andg1_Click"/>
+        <Button x:Name="m2b1andf1" HorizontalAlignment="Left" Margin="214,177,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b1andf1_Click"/>
+        <Button x:Name="m2b1ande1" HorizontalAlignment="Left" Margin="214,184,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b1ande1_Click"/>
+        <Button x:Name="m2b1andd1" HorizontalAlignment="Left" Margin="214,190,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b1andd1_Click"/>
+        <Button x:Name="m2b1andc1" HorizontalAlignment="Left" Margin="214,197,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b1andc1_Click"/>
+        <Button x:Name="m2b1andb1" HorizontalAlignment="Left" Margin="214,204,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b1andb1_Click"/>
+        <Button x:Name="m2b1anda1" HorizontalAlignment="Left" Margin="214,210,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b1anda1_Click"/>
+        <Button x:Name="m2b1andg0" HorizontalAlignment="Left" Margin="214,216,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b1andg0_Click"/>
+        <Button x:Name="m2b1andf0" HorizontalAlignment="Left" Margin="214,222,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b1andf0_Click"/>
 
-        <Rectangle x:Name="m1b3andb2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="446,21,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b3anda2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="446,27,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b3andg1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="446,33,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b3andf1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="446,39,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b3ande1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="446,46,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b3andd1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="446,53,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b3andc1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="446,59,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b3andb1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="446,66,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b3anda1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="446,72,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b3andg0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="446,79,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b3andf0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="446,85,0,0" Opacity="0.75" StrokeThickness="0"/>
+        <Button x:Name="m2b2b2" HorizontalAlignment="Left" Margin="272,158,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b2b2_Click"/>
+        <Button x:Name="m2b2a2" HorizontalAlignment="Left" Margin="272,164,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b2a2_Click"/>
+        <Button x:Name="m2b2g1" HorizontalAlignment="Left" Margin="272,170,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b2g1_Click"/>
+        <Button x:Name="m2b2f1" HorizontalAlignment="Left" Margin="272,177,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b2f1_Click"/>
+        <Button x:Name="m2b2e1" HorizontalAlignment="Left" Margin="272,184,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b2e1_Click"/>
+        <Button x:Name="m2b2d1" HorizontalAlignment="Left" Margin="272,190,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b2d1_Click"/>
+        <Button x:Name="m2b2c1" HorizontalAlignment="Left" Margin="272,197,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b2c1_Click"/>
+        <Button x:Name="m2b2b1" HorizontalAlignment="Left" Margin="272,204,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b2b1_Click"/>
+        <Button x:Name="m2b2a1" HorizontalAlignment="Left" Margin="272,210,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b2a1_Click"/>
+        <Button x:Name="m2b2g0" HorizontalAlignment="Left" Margin="272,216,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b2g0_Click"/>
+        <Button x:Name="m2b2f0" HorizontalAlignment="Left" Margin="272,222,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b2f0_Click"/>
 
-        <!-- ******************** Measure 1, Beat 4 *********************** -->
+        <Button x:Name="m2b2andb2" HorizontalAlignment="Left" Margin="330,158,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b2andb2_Click"/>
+        <Button x:Name="m2b2anda2" HorizontalAlignment="Left" Margin="330,164,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b2anda2_Click"/>
+        <Button x:Name="m2b2andg1" HorizontalAlignment="Left" Margin="330,170,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b2andg1_Click"/>
+        <Button x:Name="m2b2andf1" HorizontalAlignment="Left" Margin="330,177,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b2andf1_Click"/>
+        <Button x:Name="m2b2ande1" HorizontalAlignment="Left" Margin="330,184,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b2ande1_Click"/>
+        <Button x:Name="m2b2andd1" HorizontalAlignment="Left" Margin="330,190,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b2andd1_Click"/>
+        <Button x:Name="m2b2andc1" HorizontalAlignment="Left" Margin="330,197,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b2andc1_Click"/>
+        <Button x:Name="m2b2andb1" HorizontalAlignment="Left" Margin="330,204,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b2andb1_Click"/>
+        <Button x:Name="m2b2anda1" HorizontalAlignment="Left" Margin="330,210,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b2anda1_Click"/>
+        <Button x:Name="m2b2andg0" HorizontalAlignment="Left" Margin="330,216,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b2andg0_Click"/>
+        <Button x:Name="m2b2andf0" HorizontalAlignment="Left" Margin="330,222,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b2andf0_Click"/>
 
-        <Rectangle x:Name="m1b4b2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="504,21,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b4a2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="504,27,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b4g1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="504,33,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b4f1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="504,39,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b4e1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="504,46,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b4d1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="504,53,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b4c1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="504,59,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b4b1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="504,66,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b4a1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="504,72,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b4g0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="504,79,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b4f0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="504,85,0,0" Opacity="0.75" StrokeThickness="0"/>
+        <Button x:Name="m2b3b2" HorizontalAlignment="Left" Margin="388,158,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b3b2_Click"/>
+        <Button x:Name="m2b3a2" HorizontalAlignment="Left" Margin="388,164,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b3a2_Click"/>
+        <Button x:Name="m2b3g1" HorizontalAlignment="Left" Margin="388,170,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b3g1_Click"/>
+        <Button x:Name="m2b3f1" HorizontalAlignment="Left" Margin="388,177,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b3f1_Click"/>
+        <Button x:Name="m2b3e1" HorizontalAlignment="Left" Margin="388,184,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b3e1_Click"/>
+        <Button x:Name="m2b3d1" HorizontalAlignment="Left" Margin="388,190,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b3d1_Click"/>
+        <Button x:Name="m2b3c1" HorizontalAlignment="Left" Margin="388,197,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b3c1_Click"/>
+        <Button x:Name="m2b3b1" HorizontalAlignment="Left" Margin="388,204,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b3b1_Click"/>
+        <Button x:Name="m2b3a1" HorizontalAlignment="Left" Margin="388,210,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b3a1_Click"/>
+        <Button x:Name="m2b3g0" HorizontalAlignment="Left" Margin="388,216,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b3g0_Click"/>
+        <Button x:Name="m2b3f0" HorizontalAlignment="Left" Margin="388,222,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b3f0_Click"/>
 
-        <!-- ******************** Measure 1, Beat 4 and *********************** -->
+        <Button x:Name="m2b3andb2" HorizontalAlignment="Left" Margin="446,158,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b3andb2_Click"/>
+        <Button x:Name="m2b3anda2" HorizontalAlignment="Left" Margin="446,164,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b3anda2_Click"/>
+        <Button x:Name="m2b3andg1" HorizontalAlignment="Left" Margin="446,170,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b3andg1_Click"/>
+        <Button x:Name="m2b3andf1" HorizontalAlignment="Left" Margin="446,177,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b3andf1_Click"/>
+        <Button x:Name="m2b3ande1" HorizontalAlignment="Left" Margin="446,184,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b3ande1_Click"/>
+        <Button x:Name="m2b3andd1" HorizontalAlignment="Left" Margin="446,190,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b3andd1_Click"/>
+        <Button x:Name="m2b3andc1" HorizontalAlignment="Left" Margin="446,197,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b3andc1_Click"/>
+        <Button x:Name="m2b3andb1" HorizontalAlignment="Left" Margin="446,204,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b3andb1_Click"/>
+        <Button x:Name="m2b3anda1" HorizontalAlignment="Left" Margin="446,210,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b3anda1_Click"/>
+        <Button x:Name="m2b3andg0" HorizontalAlignment="Left" Margin="446,216,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b3andg0_Click"/>
+        <Button x:Name="m2b3andf0" HorizontalAlignment="Left" Margin="446,222,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b3andf0_Click"/>
 
-        <Rectangle x:Name="m1b4andb2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,21,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b4anda2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,27,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b4andg1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,33,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b4andf1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,39,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b4ande1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,46,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b4andd1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,53,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b4andc1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,59,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b4andb1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,66,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b4anda1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,72,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b4andg0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,79,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m1b4andf0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,85,0,0" Opacity="0.75" StrokeThickness="0"/>
+        <Button x:Name="m2b4b2" HorizontalAlignment="Left" Margin="504,158,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4b2_Click"/>
+        <Button x:Name="m2b4a2" HorizontalAlignment="Left" Margin="504,164,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4a2_Click"/>
+        <Button x:Name="m2b4g1" HorizontalAlignment="Left" Margin="504,170,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4g1_Click"/>
+        <Button x:Name="m2b4f1" HorizontalAlignment="Left" Margin="504,177,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4f1_Click"/>
+        <Button x:Name="m2b4e1" HorizontalAlignment="Left" Margin="504,184,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4e1_Click"/>
+        <Button x:Name="m2b4d1" HorizontalAlignment="Left" Margin="504,190,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4d1_Click"/>
+        <Button x:Name="m2b4c1" HorizontalAlignment="Left" Margin="504,197,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4c1_Click"/>
+        <Button x:Name="m2b4b1" HorizontalAlignment="Left" Margin="504,204,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4b1_Click"/>
+        <Button x:Name="m2b4a1" HorizontalAlignment="Left" Margin="504,210,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4a1_Click"/>
+        <Button x:Name="m2b4g0" HorizontalAlignment="Left" Margin="504,216,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4g0_Click"/>
+        <Button x:Name="m2b4f0" HorizontalAlignment="Left" Margin="504,222,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4f0_Click"/>
 
-        <!-- ******************** Measure 2, Beat 1 *********************** -->
+        <Button x:Name="m2b4andb2" HorizontalAlignment="Left" Margin="562,158,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4andb2_Click"/>
+        <Button x:Name="m2b4anda2" HorizontalAlignment="Left" Margin="562,164,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4anda2_Click"/>
+        <Button x:Name="m2b4andg1" HorizontalAlignment="Left" Margin="562,170,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4andg1_Click"/>
+        <Button x:Name="m2b4andf1" HorizontalAlignment="Left" Margin="562,177,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4andf1_Click"/>
+        <Button x:Name="m2b4ande1" HorizontalAlignment="Left" Margin="562,184,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4ande1_Click"/>
+        <Button x:Name="m2b4andd1" HorizontalAlignment="Left" Margin="562,190,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4andd1_Click"/>
+        <Button x:Name="m2b4andc1" HorizontalAlignment="Left" Margin="562,197,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4andc1_Click"/>
+        <Button x:Name="m2b4andb1" HorizontalAlignment="Left" Margin="562,204,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4andb1_Click"/>
+        <Button x:Name="m2b4anda1" HorizontalAlignment="Left" Margin="562,210,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4anda1_Click"/>
+        <Button x:Name="m2b4andg0" HorizontalAlignment="Left" Margin="562,216,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4andg0_Click"/>
+        <Button x:Name="m2b4andf0" HorizontalAlignment="Left" Margin="562,222,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4andf0_Click"/>
 
-        <Rectangle x:Name="m2b1b2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="156,158,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b1a2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="156,164,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b1g1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="156,170,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b1f1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="156,177,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b1e1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="156,184,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b1d1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="156,190,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b1c1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="156,197,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b1b1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="156,204,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b1a1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="156,210,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b1g0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="156,216,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b1f0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="156,222,0,0" Opacity="0.75" StrokeThickness="0"/>
-
-        <!-- ******************** Measure 2, Beat 1 and *********************** -->
-
-
-        <Rectangle x:Name="m2b1andb2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="214,158,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b1anda2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="214,164,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b1andg1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="214,170,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b1andf1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="214,177,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b1ande1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="214,184,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b1andd1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="214,190,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b1andc1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="214,197,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b1andb1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="214,204,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b1anda1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="214,210,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b1andg0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="214,216,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b1andf0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="214,222,0,0" Opacity="0.75" StrokeThickness="0"/>
-
-        <!-- ******************** Measure 2, Beat 2 *********************** -->
-
-        <Rectangle x:Name="m2b2b2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="272,158,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b2a2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="272,164,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b2g1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="272,170,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b2f1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="272,177,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b2e1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="272,184,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b2d1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="272,190,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b2c1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="272,197,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b2b1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="272,204,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b2a1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="272,210,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b2g0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="272,216,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b2f0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="272,222,0,0" Opacity="0.75" StrokeThickness="0"/>
-
-        <!-- ******************** Measure 2, Beat 2 and *********************** -->
-
-        <Rectangle x:Name="m2b2andb2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="330,158,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b2anda2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="330,164,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b2andg1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="330,170,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b2andf1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="330,177,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b2ande1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="330,184,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b2andd1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="330,190,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b2andc1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="330,197,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b2andb1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="330,204,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b2anda1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="330,210,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b2andg0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="330,216,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b2andf0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="330,222,0,0" Opacity="0.75" StrokeThickness="0"/>
-
-        <!-- ******************** Measure 2, Beat 3 *********************** -->
-
-        <Rectangle x:Name="m2b3b2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="388,158,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b3a2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="388,164,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b3g1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="388,170,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b3f1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="388,177,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b3e1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="388,184,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b3d1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="388,190,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b3c1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="388,197,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b3b1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="388,204,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b3a1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="388,210,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b3g0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="388,216,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b3f0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="388,222,0,0" Opacity="0.75" StrokeThickness="0"/>
-
-        <!-- ******************** Measure 2, Beat 3 and *********************** -->
-
-        <Rectangle x:Name="m2b3andb2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="446,158,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b3anda2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="446,164,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b3andg1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="446,170,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b3andf1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="446,177,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b3ande1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="446,184,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b3andd1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="446,190,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b3andc1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="446,197,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b3andb1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="446,204,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b3anda1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="446,210,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b3andg0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="446,216,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b3andf0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="446,222,0,0" Opacity="0.75" StrokeThickness="0"/>
-
-        <!-- ******************** Measure 2, Beat 4 *********************** -->
-
-        <Rectangle x:Name="m2b4b2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="504,158,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b4a2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="504,164,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b4g1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="504,170,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b4f1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="504,177,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b4e1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="504,184,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b4d1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="504,190,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b4c1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="504,197,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b4b1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="504,204,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b4a1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="504,210,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b4g0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="504,216,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b4f0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="504,222,0,0" Opacity="0.75" StrokeThickness="0"/>
-
-        <!-- ******************** Measure 2, Beat 4 and *********************** -->
-
-        <Rectangle x:Name="m2b4andb2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,158,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b4anda2" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,164,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b4andg1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,170,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b4andf1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,177,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b4ande1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,184,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b4andd1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,190,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b4andc1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,197,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b4andb1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,204,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b4anda1" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,210,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b4andg0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,216,0,0" Opacity="0.75" StrokeThickness="0"/>
-        <Rectangle x:Name="m2b4andf0" Fill="#FFC5C5C5" HorizontalAlignment="Left" Height="5" Stroke="Black" VerticalAlignment="Top" Width="52" Margin="562,222,0,0" Opacity="0.75" StrokeThickness="0"/>
         <Rectangle Name="musicSlider"  Fill="Black" HorizontalAlignment="Left" Height="69" VerticalAlignment="Top" Width="5" Margin="149,21,0,0"/>
 
-        <Image x:Name="m1bar1pb1" HorizontalAlignment="Left" Height="22" Margin="174,6,0,0" VerticalAlignment="Top" Width="13" />
+        <Image x:Name="m1bar1pb1" HorizontalAlignment="Left" Height="22" Margin="175,4,0,0" VerticalAlignment="Top" Width="13" RenderTransformOrigin="0.5,0.5" />
         <Image x:Name="m1bar1pb2" HorizontalAlignment="Left" Height="22" Margin="234,6,0,0" VerticalAlignment="Top" Width="13" />
         <Image x:Name="m1bar1pb3" HorizontalAlignment="Left" Height="22" Margin="290,6,0,0" VerticalAlignment="Top" Width="13" />
         <Image x:Name="m1bar1pb4" HorizontalAlignment="Left" Height="22" Margin="351,6,0,0" VerticalAlignment="Top" Width="13" />
@@ -267,6 +239,8 @@
         <Image x:Name="m1bar4pb2" HorizontalAlignment="Left" Height="22" Margin="466,141,0,0" VerticalAlignment="Top" Width="13" />
         <Image x:Name="m1bar4pb3" HorizontalAlignment="Left" Height="22" Margin="522,141,0,0" VerticalAlignment="Top" Width="13" />
         <Image x:Name="m1bar4pb4" HorizontalAlignment="Left" Height="22" Margin="583,141,0,0" VerticalAlignment="Top" Width="13" />
+        
+
 
     </Grid>
 </Window>
