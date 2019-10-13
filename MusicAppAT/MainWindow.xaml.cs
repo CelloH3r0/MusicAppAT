@@ -44,8 +44,8 @@ namespace MusicAppAT
         {
             int marginSize = 150;
             while (true)
-            {
-                await Task.Delay(5);
+            { 
+                await Task.Delay(1);
                 Thickness margin = musicSlider.Margin;
                 
                 margin.Left = marginSize;
@@ -54,17 +54,16 @@ namespace MusicAppAT
 
                 if(marginSize==625 && margin.Top == 21)
                 {
-                    MessageBox.Show("End of Measure 1");
                     margin.Top = 158;
-                    musicSlider.Margin = margin;
                     marginSize = 150;
+                    musicSlider.Margin = margin;
                 }
                 if (marginSize == 625 && margin.Top == 158)
                 {
-                    MessageBox.Show("End of Measure 2");
                     marginSize = 150;
                     margin.Left = marginSize;
                     margin.Top = 21;
+                    musicSlider.Margin = margin;
                 }
             }
         }
