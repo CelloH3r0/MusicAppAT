@@ -15,6 +15,8 @@ using System.Windows.Shapes;
 using System.Windows.Resources;
 using System.Runtime.InteropServices;
 using Microsoft.Win32.SafeHandles;
+using System.Media;
+using System.IO;
 
 namespace MusicAppAT
 {
@@ -36,6 +38,9 @@ namespace MusicAppAT
 
         private void OnLoad(object sender, EventArgs e)
         {
+            SoundPlayer player = new SoundPlayer("References\\SeparatedSoundFiles\\A2.wav"); // CHECK TO MAKE SURE THE SPELLING OF SEPARATED IS ACCURATE! IT MAY NOT BE
+            player.Load();
+            player.Play();
             
         }
         public async void PlayMusic()
@@ -74,7 +79,6 @@ namespace MusicAppAT
         private void whole_Click(object sender, RoutedEventArgs e)
         {
             double length = 4;
-
         }
         private void dothalf_Click(object sender, RoutedEventArgs e)
         {
@@ -167,6 +171,14 @@ namespace MusicAppAT
             string position = "m1b1";
             string noteName = "f0";
             //margin: left: 175, top: 68, right: 0, bottom: 0
+
+            Thickness margin = m1bar1pb1.Margin;
+            margin.Left = 175;
+            margin.Top = 65;
+            m1bar1pb1.Margin = margin;
+            Image finalImage = new Image();
+            finalImage.Source = new BitmapImage(new Uri("pack://application:,,,/References/Images/quarternote.png"));
+            m1bar1pb1.Source = finalImage.Source;
         }
 
         private void m1b1andb2_Click(object sender, EventArgs e)
@@ -1174,6 +1186,9 @@ namespace MusicAppAT
             PlayMusic();
         }
 
-        
+        private void reset_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

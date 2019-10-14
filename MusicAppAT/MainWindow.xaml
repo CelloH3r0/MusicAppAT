@@ -223,23 +223,24 @@
 
         <Rectangle Name="musicSlider"  Fill="Black" HorizontalAlignment="Left" Height="69" VerticalAlignment="Top" Width="5" Margin="149,21,0,0"/>
 
-        <Image x:Name="m1bar1pb1" HorizontalAlignment="Left" Height="22" Margin="175,4,0,0" VerticalAlignment="Top" Width="13" RenderTransformOrigin="0.5,0.5" StretchDirection="UpOnly" />
-        <Image x:Name="m1bar1pb2" HorizontalAlignment="Left" Height="22" Margin="234,4,0,0" VerticalAlignment="Top" Width="13" />
-        <Image x:Name="m1bar1pb3" HorizontalAlignment="Left" Height="22" Margin="290,4,0,0" VerticalAlignment="Top" Width="13" />
-        <Image x:Name="m1bar1pb4" HorizontalAlignment="Left" Height="22" Margin="351,4,0,0" VerticalAlignment="Top" Width="13" />
-        <Image x:Name="m1bar2pb1" HorizontalAlignment="Left" Height="22" Margin="406,4,0,0" VerticalAlignment="Top" Width="13" />
-        <Image x:Name="m1bar2pb2" HorizontalAlignment="Left" Height="22" Margin="466,4,0,0" VerticalAlignment="Top" Width="13" />
-        <Image x:Name="m1bar2pb3" HorizontalAlignment="Left" Height="22" Margin="522,4,0,0" VerticalAlignment="Top" Width="13" />
-        <Image x:Name="m1bar2pb4" HorizontalAlignment="Left" Height="22" Margin="583,4,0,0" VerticalAlignment="Top" Width="13" />
-        <Image x:Name="m1bar3pb1" HorizontalAlignment="Left" Height="22" Margin="174,141,0,0" VerticalAlignment="Top" Width="13" />
-        <Image x:Name="m1bar3pb2" HorizontalAlignment="Left" Height="22" Margin="234,141,0,0" VerticalAlignment="Top" Width="13" />
-        <Image x:Name="m1bar3pb3" HorizontalAlignment="Left" Height="22" Margin="290,141,0,0" VerticalAlignment="Top" Width="13" />
-        <Image x:Name="m1bar3pb4" HorizontalAlignment="Left" Height="22" Margin="351,141,0,0" VerticalAlignment="Top" Width="13" />
-        <Image x:Name="m1bar4pb1" HorizontalAlignment="Left" Height="22" Margin="406,141,0,0" VerticalAlignment="Top" Width="13" />
-        <Image x:Name="m1bar4pb2" HorizontalAlignment="Left" Height="22" Margin="466,141,0,0" VerticalAlignment="Top" Width="13" />
-        <Image x:Name="m1bar4pb3" HorizontalAlignment="Left" Height="22" Margin="522,141,0,0" VerticalAlignment="Top" Width="13" />
-        <Image x:Name="m1bar4pb4" HorizontalAlignment="Left" Height="22" Margin="583,141,0,0" VerticalAlignment="Top" Width="13" />
-        
+        <Image x:Name="m1bar1pb1" HorizontalAlignment="Left" Height="28" Margin="175,4,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.5,0.5" />
+        <Image x:Name="m1bar1pb2" HorizontalAlignment="Left" Height="28" Margin="234,4,0,0" VerticalAlignment="Top" Width="17" />
+        <Image x:Name="m1bar1pb3" HorizontalAlignment="Left" Height="28" Margin="290,4,0,0" VerticalAlignment="Top" Width="17" />
+        <Image x:Name="m1bar1pb4" HorizontalAlignment="Left" Height="28" Margin="351,4,0,0" VerticalAlignment="Top" Width="17" />
+        <Image x:Name="m1bar2pb1" HorizontalAlignment="Left" Height="28" Margin="406,4,0,0" VerticalAlignment="Top" Width="17" />
+        <Image x:Name="m1bar2pb2" HorizontalAlignment="Left" Height="28" Margin="466,4,0,0" VerticalAlignment="Top" Width="17" />
+        <Image x:Name="m1bar2pb3" HorizontalAlignment="Left" Height="28" Margin="522,4,0,0" VerticalAlignment="Top" Width="17" />
+        <Image x:Name="m1bar2pb4" HorizontalAlignment="Left" Height="28" Margin="583,4,0,0" VerticalAlignment="Top" Width="17" />
+        <Image x:Name="m1bar3pb1" HorizontalAlignment="Left" Height="28" Margin="174,141,0,0" VerticalAlignment="Top" Width="17" />
+        <Image x:Name="m1bar3pb2" HorizontalAlignment="Left" Height="28" Margin="234,141,0,0" VerticalAlignment="Top" Width="17" />
+        <Image x:Name="m1bar3pb3" HorizontalAlignment="Left" Height="28" Margin="290,141,0,0" VerticalAlignment="Top" Width="17" />
+        <Image x:Name="m1bar3pb4" HorizontalAlignment="Left" Height="28" Margin="351,141,0,0" VerticalAlignment="Top" Width="17" />
+        <Image x:Name="m1bar4pb1" HorizontalAlignment="Left" Height="28" Margin="406,141,0,0" VerticalAlignment="Top" Width="17" />
+        <Image x:Name="m1bar4pb2" HorizontalAlignment="Left" Height="28" Margin="466,141,0,0" VerticalAlignment="Top" Width="17" />
+        <Image x:Name="m1bar4pb3" HorizontalAlignment="Left" Height="28" Margin="522,141,0,0" VerticalAlignment="Top" Width="17" />
+        <Image x:Name="m1bar4pb4" HorizontalAlignment="Left" Height="28" Margin="583,141,0,0" VerticalAlignment="Top" Width="17" />
+        <Button Content="Reset" HorizontalAlignment="Left" Margin="59,1,0,0" VerticalAlignment="Top" Width="52" Height="25" FontSize="18" FontFamily="Arial" x:Name="reset" Click="reset_Click" />
+
 
 
     </Grid>
