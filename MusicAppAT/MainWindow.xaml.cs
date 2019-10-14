@@ -50,12 +50,9 @@ namespace MusicAppAT
 
         private void OnLoad(object sender, EventArgs e)
         {
-            SoundPlayer player = new SoundPlayer(GetExeDirSubPath("../../References/SeparatedSoundFiles/A1.wav"));
-            player.Load();
-            player.Play();
             
         }
-        public async void PlayMusic()
+        public async void MovePlayer()
         {
             int marginSize = 150;
             while (true)
@@ -81,6 +78,17 @@ namespace MusicAppAT
                     musicSlider.Margin = margin;
                 }
             }
+        }
+
+        public async void PlayMusic()
+        {
+            SoundPlayer player = new SoundPlayer(GetExeDirSubPath("../../References/SeparatedSoundFiles/A1.wav"));
+            player.Load();
+            player.Play();
+            await Task.Delay(3000);
+            player.SoundLocation = GetExeDirSubPath("../../References/SeparatedSoundFiles/A2.wav");
+            player.Load();
+            player.Play();
         }
 
         public void OnClick()
@@ -1196,6 +1204,7 @@ namespace MusicAppAT
         private void play_Click(object sender, RoutedEventArgs e)
         {
             PlayMusic();
+            MovePlayer();
         }
 
         private void reset_Click(object sender, RoutedEventArgs e)
