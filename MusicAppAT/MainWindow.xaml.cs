@@ -36,9 +36,21 @@ namespace MusicAppAT
 
         }
 
+        public static string GetExeDirSubPath(string subPath)
+        {
+            return new DirectoryInfo(System.IO.Path.Combine(GetExeDirPath(), subPath)).FullName;
+        }
+
+        public static string GetExeDirPath()
+        {
+            System.Reflection.Assembly a = System.Reflection.Assembly.GetEntryAssembly();
+            string baseDir = System.IO.Path.GetDirectoryName(a.Location);
+            return baseDir;
+        }
+
         private void OnLoad(object sender, EventArgs e)
         {
-            SoundPlayer player = new SoundPlayer("References\\SeparatedSoundFiles\\A2.wav"); // CHECK TO MAKE SURE THE SPELLING OF SEPARATED IS ACCURATE! IT MAY NOT BE
+            SoundPlayer player = new SoundPlayer(GetExeDirSubPath("../../References/SeparatedSoundFiles/A1.wav"));
             player.Load();
             player.Play();
             
