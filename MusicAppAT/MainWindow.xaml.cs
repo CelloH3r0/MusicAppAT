@@ -102,29 +102,70 @@ namespace MusicAppAT
 
         
 
-        private void whole_Click(object sender, RoutedEventArgs e)
+        private void Whole_Click(object sender, RoutedEventArgs e)
         {
             double length = 4;
             notes[numOfNotes, 0] = length.ToString();
+
+            // lighten selected button
+            wholeNote.Background = Brushes.LightGray;
+
+            // darkening buttons
+            dothalfNote.Background = Brushes.DarkGray;
+            halfNote.Background = Brushes.DarkGray;
+            dotquarterNote.Background = Brushes.DarkGray;
+            quarterNote.Background = Brushes.DarkGray;
         }
-        private void dothalf_Click(object sender, RoutedEventArgs e)
+        private void Dothalf_Click(object sender, RoutedEventArgs e)
         {
             double length = 3;
+            // lighten selected button
+            dothalfNote.Background = Brushes.LightGray;
+
+            // darkening buttons
+            wholeNote.Background = Brushes.DarkGray;
+            halfNote.Background = Brushes.DarkGray;
+            dotquarterNote.Background = Brushes.DarkGray;
+            quarterNote.Background = Brushes.DarkGray;
         }
 
-        private void half_Click(object sender, RoutedEventArgs e)
+        private void Half_Click(object sender, RoutedEventArgs e)
         {
             double length = 2;
+            // lighten selected button
+            halfNote.Background = Brushes.LightGray;
+
+            // darkening buttons
+            wholeNote.Background = Brushes.DarkGray;
+            dothalfNote.Background = Brushes.DarkGray;
+            dotquarterNote.Background = Brushes.DarkGray;
+            quarterNote.Background = Brushes.DarkGray;
         }
 
-        private void dotquarter_Click(object sender, RoutedEventArgs e)
+        private void Dotquarter_Click(object sender, RoutedEventArgs e)
         {
             double length = 1.5;
+            // lighten selected button
+            dotquarterNote.Background = Brushes.LightGray;
+
+            // darkening buttons
+            wholeNote.Background = Brushes.DarkGray;
+            dothalfNote.Background = Brushes.DarkGray;
+            halfNote.Background = Brushes.DarkGray;
+            quarterNote.Background = Brushes.DarkGray;
         }
 
-        private void quarter_Click(object sender, RoutedEventArgs e)
+        private void Quarter_Click(object sender, RoutedEventArgs e)
         {
             double length = 1;
+            // lighten selected button
+            quarterNote.Background = Brushes.LightGray;
+
+            // darkening buttons
+            wholeNote.Background = Brushes.DarkGray;
+            dothalfNote.Background = Brushes.DarkGray;
+            halfNote.Background = Brushes.DarkGray;
+            dotquarterNote.Background = Brushes.DarkGray;
         }
 
         private void m1b1b2_Click(object sender, EventArgs e)
