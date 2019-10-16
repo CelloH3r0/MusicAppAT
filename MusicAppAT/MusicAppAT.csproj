@@ -102,20 +102,14 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Resource Include="References\Images\wholenote.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="References\Images\halfnote.png" />
-    <Resource Include="References\Images\dottedhalfnote.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="References\Images\quarternote.png" />
-    <Resource Include="References\Images\dottedquarternote.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="References\Images\sheet.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="References\Images\dottedhalfnote.png" />
+    <Resource Include="References\Images\dottedquarternote.png" />
+    <Resource Include="References\Images\quarternote.png" />
+    <Resource Include="References\Images\wholenote.png" />
+    <Resource Include="References\Images\halfnote.png" />
     <Content Include="References\SeparatedSoundFiles\A1.wav" />
     <Content Include="References\SeparatedSoundFiles\A2.wav" />
     <Content Include="References\SeparatedSoundFiles\A3.wav" />
