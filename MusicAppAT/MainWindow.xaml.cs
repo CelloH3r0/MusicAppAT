@@ -119,6 +119,8 @@ namespace MusicAppAT
         private void Dothalf_Click(object sender, RoutedEventArgs e)
         {
             double length = 3;
+            notes[numOfNotes, 0] = length.ToString();
+
             // lighten selected button
             dothalfNote.Background = Brushes.LightGray;
 
@@ -132,6 +134,8 @@ namespace MusicAppAT
         private void Half_Click(object sender, RoutedEventArgs e)
         {
             double length = 2;
+            notes[numOfNotes, 0] = length.ToString();
+
             // lighten selected button
             halfNote.Background = Brushes.LightGray;
 
@@ -145,6 +149,8 @@ namespace MusicAppAT
         private void Dotquarter_Click(object sender, RoutedEventArgs e)
         {
             double length = 1.5;
+            notes[numOfNotes, 0] = length.ToString();
+
             // lighten selected button
             dotquarterNote.Background = Brushes.LightGray;
 
@@ -158,6 +164,8 @@ namespace MusicAppAT
         private void Quarter_Click(object sender, RoutedEventArgs e)
         {
             double length = 1;
+            notes[numOfNotes, 0] = length.ToString();
+
             // lighten selected button
             quarterNote.Background = Brushes.LightGray;
 
@@ -183,7 +191,9 @@ namespace MusicAppAT
             string position = "m1b1";
             string noteName = "a2";
             //margin: left: 175, top: 10, right: 0, bottom: 0
-
+            notes[numOfNotes, 1] = position;
+            notes[numOfNotes, 2] = noteName;
+            numOfNotes++;
         }
 
         private void m1b1g1_Click(object sender, EventArgs e)
@@ -191,6 +201,9 @@ namespace MusicAppAT
             string position = "m1b1";
             string noteName = "g1";
             //margin: left: 175, top: 16, right: 0, bottom: 0
+            notes[numOfNotes, 1] = position;
+            notes[numOfNotes, 2] = noteName;
+            numOfNotes++;
         }
 
         private void m1b1f1_Click(object sender, EventArgs e)
@@ -198,6 +211,9 @@ namespace MusicAppAT
             string position = "m1b1";
             string noteName = "f1";
             //margin: left: 175, top: 23, right: 0, bottom: 0
+            notes[numOfNotes, 1] = position;
+            notes[numOfNotes, 2] = noteName;
+            numOfNotes++;
         }
 
         private void m1b1e1_Click(object sender, EventArgs e)
@@ -205,24 +221,36 @@ namespace MusicAppAT
             string position = "m1b1";
             string noteName = "e1";
             //margin: left: 175, top: 30, right: 0, bottom: 0
+            notes[numOfNotes, 1] = position;
+            notes[numOfNotes, 2] = noteName;
+            numOfNotes++;
         }
         private void m1b1d1_Click(object sender, EventArgs e)
         {
             string position = "m1b1";
             string noteName = "d1";
             //margin: left: 175, top: 36, right: 0, bottom: 0
+            notes[numOfNotes, 1] = position;
+            notes[numOfNotes, 2] = noteName;
+            numOfNotes++;
         }
         private void m1b1c1_Click(object sender, EventArgs e)
         {
             string position = "m1b1";
             string noteName = "c1";
             //margin: left: 175, top: 43, right: 0, bottom: 0
+            notes[numOfNotes, 1] = position;
+            notes[numOfNotes, 2] = noteName;
+            numOfNotes++;
         }
         private void m1b1b1_Click(object sender, EventArgs e)
         {
             string position = "m1b1";
             string noteName = "b1";
             //margin: left: 175, top: 50, right: 0, bottom: 0
+            notes[numOfNotes, 1] = position;
+            notes[numOfNotes, 2] = noteName;
+            numOfNotes++;
         }
 
         private void m1b1a1_Click(object sender, EventArgs e)
@@ -230,12 +258,18 @@ namespace MusicAppAT
             string position = "m1b1";
             string noteName = "a1";
             //margin: left: 175, top: 56, right: 0, bottom: 0
+            notes[numOfNotes, 1] = position;
+            notes[numOfNotes, 2] = noteName;
+            numOfNotes++;
         }
         private void m1b1g0_Click(object sender, EventArgs e)
         {
             string position = "m1b1";
             string noteName = "g0";
             //margin: left: 175, top: 62, right: 0, bottom: 0
+            notes[numOfNotes, 1] = position;
+            notes[numOfNotes, 2] = noteName;
+            numOfNotes++;
         }
         private void m1b1f0_Click(object sender, EventArgs e)
         {

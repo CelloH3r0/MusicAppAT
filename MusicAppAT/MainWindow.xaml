@@ -222,7 +222,7 @@
         <Button x:Name="m2b4andg0" HorizontalAlignment="Left" Margin="562,216,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4andg0_Click"  Opacity=".15"/>
         <Button x:Name="m2b4andf0" HorizontalAlignment="Left" Margin="562,222,0,0" VerticalAlignment="Top" Width="52" Height="5" Click="m2b4andf0_Click"  Opacity=".15"/>
 
-        <Rectangle Name="musicSlider"  Fill="Black" HorizontalAlignment="Left" Height="69" VerticalAlignment="Top" Width="5" Margin="149,21,0,0"/>
+        <Rectangle x:Name="musicSlider"  Fill="Black" HorizontalAlignment="Left" Height="69" VerticalAlignment="Top" Width="5" Margin="149,21,0,0"/>
 
         <Image x:Name="m1bar1pb1" HorizontalAlignment="Left" Height="22" Margin="175,4,0,0"   VerticalAlignment="Top" Width="13" RenderTransformOrigin="0.5,0.5" />
         <Image x:Name="m1bar1pb2" HorizontalAlignment="Left" Height="22" Margin="234,6,0,0"   VerticalAlignment="Top" Width="13" Opacity=".15"/>
