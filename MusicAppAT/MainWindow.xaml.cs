@@ -61,7 +61,7 @@ namespace MusicAppAT
             int marginSize = 150;
             while (true)
             {
-                await Task.Delay(8);
+                await Task.Delay(1);
                 Thickness margin = musicSlider.Margin;
                 
                 margin.Left = marginSize;
@@ -201,7 +201,14 @@ namespace MusicAppAT
             
             
 
-            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
+            double length = 0.0;
+            try{
+                length = Double.Parse(notes[numOfNotes, 0]); 
+                notes[numOfNotes, 2] = noteName; 
+                notes[numOfNotes, 1] = position; 
+            } catch(Exception ex){
+
+            }
 
             if (length == 4)
             {
@@ -11083,7 +11090,14 @@ namespace MusicAppAT
                 }
                 int intdelay = (int)Math.Round(delay);
                 SoundPlayer player;
-                try { player = new SoundPlayer(GetExeDirSubPath("../../References/SeparatedSoundFiles/" + notes[i, 2].ToUpper() + ".wav")); player.Load(); player.PlayLooping(); await Task.Delay(intdelay); player.Stop(); } catch (Exception ex) { player = new SoundPlayer(GetExeDirSubPath("../../References/SeparatedSoundFiles/d1.wav")); player.Load(); player.PlayLooping(); await Task.Delay(intdelay); player.Stop(); }
+                try { 
+                    player = new SoundPlayer(GetExeDirSubPath("../../References/SeparatedSoundFiles/" + notes[i, 2].ToUpper() + ".wav"));
+                    player.Load(); player.PlayLooping(); 
+                    await Task.Delay(intdelay); 
+                    player.Stop(); 
+                } catch (Exception ex) { 
+                    
+                }
             }
         }
 
