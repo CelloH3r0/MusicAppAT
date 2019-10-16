@@ -1569,8 +1569,8 @@ namespace MusicAppAT
             else if (length == 3)
             {
                 Thickness margin = m1bar1pb3.Margin;
-                margin.Left = 234;
-                margin.Top = 13;
+                margin.Left = 290;
+                margin.Top = 1;
                 m1bar1pb1.Margin = margin;
                 Image finalImage = new Image();
                 finalImage.Source = new BitmapImage(new Uri("pack://application:,,,/References/Images/dottedhalfnote.png"));
@@ -1579,8 +1579,8 @@ namespace MusicAppAT
             else if (length == 2)
             {
                 Thickness margin = m1bar1pb3.Margin;
-                margin.Left = 234;
-                margin.Top = 13;
+                margin.Left = 290;
+                margin.Top = 1;
                 m1bar1pb1.Margin = margin;
                 Image finalImage = new Image();
                 finalImage.Source = new BitmapImage(new Uri("pack://application:,,,/References/Images/halfnote.png"));
@@ -1589,8 +1589,8 @@ namespace MusicAppAT
             else if (length == 1.5)
             {
                 Thickness margin = m1bar1pb3.Margin;
-                margin.Left = 234;
-                margin.Top = 13;
+                margin.Left = 290;
+                margin.Top = 1;
                 m1bar1pb1.Margin = margin;
                 Image finalImage = new Image();
                 finalImage.Source = new BitmapImage(new Uri("pack://application:,,,/References/Images/dottedquarternote.png"));
@@ -1599,8 +1599,8 @@ namespace MusicAppAT
             else if (length == 1)
             {
                 Thickness margin = m1bar1pb3.Margin;
-                margin.Left = 234;
-                margin.Top = 13;
+                margin.Left = 290;
+                margin.Top = 1;
                 m1bar1pb1.Margin = margin;
                 Image finalImage = new Image();
                 finalImage.Source = new BitmapImage(new Uri("pack://application:,,,/References/Images/quarternote.png"));
@@ -1616,6 +1616,59 @@ namespace MusicAppAT
             //margin: left: 290, top: 7, right: 0, bottom: 0
             notes[numOfNotes, 1] = position;
             notes[numOfNotes, 2] = noteName;
+
+            double length = Double.Parse(notes[numOfNotes, 0]);
+
+            if (length == 4)
+            {
+                Thickness margin = m1bar1pb3.Margin;
+                margin.Left = 290;
+                margin.Top = 7;
+                m1bar1pb1.Margin = margin;
+                Image finalImage = new Image();
+                finalImage.Source = new BitmapImage(new Uri("pack://application:,,,/References/Images/wholenote.png"));
+                m1bar1pb1.Source = finalImage.Source;
+            }
+            else if (length == 3)
+            {
+                Thickness margin = m1bar1pb3.Margin;
+                margin.Left = 290;
+                margin.Top = 7;
+                m1bar1pb1.Margin = margin;
+                Image finalImage = new Image();
+                finalImage.Source = new BitmapImage(new Uri("pack://application:,,,/References/Images/dottedhalfnote.png"));
+                m1bar1pb1.Source = finalImage.Source;
+            }
+            else if (length == 2)
+            {
+                Thickness margin = m1bar1pb3.Margin;
+                margin.Left = 290;
+                margin.Top = 7;
+                m1bar1pb1.Margin = margin;
+                Image finalImage = new Image();
+                finalImage.Source = new BitmapImage(new Uri("pack://application:,,,/References/Images/halfnote.png"));
+                m1bar1pb1.Source = finalImage.Source;
+            }
+            else if (length == 1.5)
+            {
+                Thickness margin = m1bar1pb3.Margin;
+                margin.Left = 290;
+                margin.Top = 7;
+                m1bar1pb1.Margin = margin;
+                Image finalImage = new Image();
+                finalImage.Source = new BitmapImage(new Uri("pack://application:,,,/References/Images/dottedquarternote.png"));
+                m1bar1pb1.Source = finalImage.Source;
+            }
+            else if (length == 1)
+            {
+                Thickness margin = m1bar1pb3.Margin;
+                margin.Left = 290;
+                margin.Top = 7;
+                m1bar1pb1.Margin = margin;
+                Image finalImage = new Image();
+                finalImage.Source = new BitmapImage(new Uri("pack://application:,,,/References/Images/quarternote.png"));
+                m1bar1pb1.Source = finalImage.Source;
+            }
             numOfNotes++;
         }
 
