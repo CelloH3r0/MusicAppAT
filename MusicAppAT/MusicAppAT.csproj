@@ -100,9 +100,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="References\Fonts\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="References\Images\wholenote.png" />
   </ItemGroup>
@@ -118,29 +116,29 @@
     <Resource Include="References\Images\sheet.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="References\SeperatedSoundFiles\A1.wav" />
-    <Content Include="References\SeperatedSoundFiles\A2.wav" />
-    <Content Include="References\SeperatedSoundFiles\A3.wav" />
-    <Content Include="References\SeperatedSoundFiles\B1.wav" />
-    <Content Include="References\SeperatedSoundFiles\B2.wav" />
-    <Content Include="References\SeperatedSoundFiles\B3.wav" />
-    <Content Include="References\SeperatedSoundFiles\C0.wav" />
-    <Content Include="References\SeperatedSoundFiles\C1.wav" />
-    <Content Include="References\SeperatedSoundFiles\C2.wav" />
-    <Content Include="References\SeperatedSoundFiles\C3.wav" />
-    <Content Include="References\SeperatedSoundFiles\D0.wav" />
-    <Content Include="References\SeperatedSoundFiles\D1.wav" />
-    <Content Include="References\SeperatedSoundFiles\D2.wav" />
-    <Content Include="References\SeperatedSoundFiles\D3.wav" />
-    <Content Include="References\SeperatedSoundFiles\E0.wav" />
-    <Content Include="References\SeperatedSoundFiles\E1.wav" />
-    <Content Include="References\SeperatedSoundFiles\E2.wav" />
-    <Content Include="References\SeperatedSoundFiles\F0.wav" />
-    <Content Include="References\SeperatedSoundFiles\F1.wav" />
-    <Content Include="References\SeperatedSoundFiles\F2.wav" />
-    <Content Include="References\SeperatedSoundFiles\G0.wav" />
-    <Content Include="References\SeperatedSoundFiles\G1.wav" />
-    <Content Include="References\SeperatedSoundFiles\G2.wav" />
+    <Content Include="References\SeparatedSoundFiles\A1.wav" />
+    <Content Include="References\SeparatedSoundFiles\A2.wav" />
+    <Content Include="References\SeparatedSoundFiles\A3.wav" />
+    <Content Include="References\SeparatedSoundFiles\B1.wav" />
+    <Content Include="References\SeparatedSoundFiles\B2.wav" />
+    <Content Include="References\SeparatedSoundFiles\B3.wav" />
+    <Content Include="References\SeparatedSoundFiles\C0.wav" />
+    <Content Include="References\SeparatedSoundFiles\C1.wav" />
+    <Content Include="References\SeparatedSoundFiles\C2.wav" />
+    <Content Include="References\SeparatedSoundFiles\C3.wav" />
+    <Content Include="References\SeparatedSoundFiles\D0.wav" />
+    <Content Include="References\SeparatedSoundFiles\D1.wav" />
+    <Content Include="References\SeparatedSoundFiles\D2.wav" />
+    <Content Include="References\SeparatedSoundFiles\D3.wav" />
+    <Content Include="References\SeparatedSoundFiles\E0.wav" />
+    <Content Include="References\SeparatedSoundFiles\E1.wav" />
+    <Content Include="References\SeparatedSoundFiles\E2.wav" />
+    <Content Include="References\SeparatedSoundFiles\F0.wav" />
+    <Content Include="References\SeparatedSoundFiles\F1.wav" />
+    <Content Include="References\SeparatedSoundFiles\F2.wav" />
+    <Content Include="References\SeparatedSoundFiles\G0.wav" />
+    <Content Include="References\SeparatedSoundFiles\G1.wav" />
+    <Content Include="References\SeparatedSoundFiles\G2.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
