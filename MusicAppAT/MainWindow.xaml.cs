@@ -27,7 +27,7 @@ namespace MusicAppAT
     {
         int numOfNotes = 0;
 
-        string[,] notes = new string[16, 3];
+        string[,] notes = new string[16,3];
 
         public MainWindow()
         {
@@ -61,7 +61,7 @@ namespace MusicAppAT
             int marginSize = 150;
             while (true)
             {
-                await Task.Delay(1);
+                await Task.Delay(8);
                 Thickness margin = musicSlider.Margin;
                 
                 margin.Left = marginSize;
@@ -80,19 +80,9 @@ namespace MusicAppAT
                     margin.Left = marginSize;
                     margin.Top = 21;
                     musicSlider.Margin = margin;
+                    break;
                 }
             }
-        }
-
-        public async void PlayMusic()
-        {
-            SoundPlayer player = new SoundPlayer(GetExeDirSubPath("../../References/SeparatedSoundFiles/A1.wav"));
-            player.Load();
-            player.Play();
-            await Task.Delay(3000);
-            player.SoundLocation = GetExeDirSubPath("../../References/SeparatedSoundFiles/A2.wav");
-            player.Load();
-            player.Play();
         }
 
         public void OnClick()
@@ -104,9 +94,15 @@ namespace MusicAppAT
 
         private void Whole_Click(object sender, RoutedEventArgs e)
         {
-            double length = 4;
+            try
+            {
+                double length = 4;
             notes[numOfNotes, 0] = length.ToString();
+            }
+            catch (Exception ex)
+            {
 
+            }
             // lighten selected button
             wholeNote.Background = Brushes.LightGray;
 
@@ -118,8 +114,14 @@ namespace MusicAppAT
         }
         private void Dothalf_Click(object sender, RoutedEventArgs e)
         {
-            double length = 3;
-            notes[numOfNotes, 0] = length.ToString();
+            try
+            {
+                double length = 3;
+                notes[numOfNotes, 0] = length.ToString();
+            } catch(Exception ex)
+            {
+
+            }
             // lighten selected button
             dothalfNote.Background = Brushes.LightGray;
 
@@ -132,10 +134,16 @@ namespace MusicAppAT
 
         private void Half_Click(object sender, RoutedEventArgs e)
         {
-            double length = 2;
-            notes[numOfNotes, 0] = length.ToString();
-            // lighten selected button
-            halfNote.Background = Brushes.LightGray;
+            try
+            {
+                double length = 2;
+                notes[numOfNotes, 0] = length.ToString();
+            } catch(Exception ex)
+            {
+
+            }
+    // lighten selected button
+    halfNote.Background = Brushes.LightGray;
 
             // darkening buttons
             wholeNote.Background = Brushes.DarkGray;
@@ -146,10 +154,16 @@ namespace MusicAppAT
 
         private void Dotquarter_Click(object sender, RoutedEventArgs e)
         {
-            double length = 1.5;
+            try
+            {
+                double length = 1.5;
             notes[numOfNotes, 0] = length.ToString();
-            // lighten selected button
-            dotquarterNote.Background = Brushes.LightGray;
+        } catch(Exception ex)
+            {
+
+            }
+    // lighten selected button
+    dotquarterNote.Background = Brushes.LightGray;
 
             // darkening buttons
             wholeNote.Background = Brushes.DarkGray;
@@ -160,8 +174,15 @@ namespace MusicAppAT
 
         private void Quarter_Click(object sender, RoutedEventArgs e)
         {
-            double length = 1;
+            try
+            {
+                double length = 1;
             notes[numOfNotes, 0] = length.ToString();
+            }
+            catch (Exception ex)
+            {
+
+            }
             // lighten selected button
             quarterNote.Background = Brushes.LightGray;
 
@@ -177,10 +198,10 @@ namespace MusicAppAT
             string position = "m1b1";
             string noteName = "b2";
             //margin: left: 175, top: 1, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -240,10 +261,10 @@ namespace MusicAppAT
             string position = "m1b1";
             string noteName = "a2";
             //margin: left: 175, top: 7, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -304,10 +325,10 @@ namespace MusicAppAT
             string position = "m1b1";
             string noteName = "g1";
             //margin: left: 175, top: 13, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -367,10 +388,10 @@ namespace MusicAppAT
             string position = "m1b1";
             string noteName = "f1";
             //margin: left: 175, top: 20, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -430,10 +451,10 @@ namespace MusicAppAT
             string position = "m1b1";
             string noteName = "e1";
             //margin: left: 175, top: 27, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -492,10 +513,10 @@ namespace MusicAppAT
             string position = "m1b1";
             string noteName = "d1";
             //margin: left: 175, top: 33, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -554,10 +575,10 @@ namespace MusicAppAT
             string position = "m1b1";
             string noteName = "c1";
             //margin: left: 175, top: 13, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -616,10 +637,10 @@ namespace MusicAppAT
             string position = "m1b1";
             string noteName = "b1";
             //margin: left: 175, top: 47, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -679,10 +700,9 @@ namespace MusicAppAT
             string position = "m1b1";
             string noteName = "a1";
             //margin: left: 175, top: 53, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -741,10 +761,10 @@ namespace MusicAppAT
             string position = "m1b1";
             string noteName = "g0";
             //margin: left: 175, top: 59, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -803,11 +823,11 @@ namespace MusicAppAT
             string position = "m1b1";
             string noteName = "f0";
             //margin: left: 175, top: 65, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
             
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -863,10 +883,10 @@ namespace MusicAppAT
             string position = "m1b1and";
             string noteName = "b2";
             //margin: left: 234, top: 1, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -926,10 +946,10 @@ namespace MusicAppAT
             string position = "m1b1and";
             string noteName = "a2";
             //margin: left: 234, top: 7, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -989,10 +1009,10 @@ namespace MusicAppAT
             string position = "m1b1and";
             string noteName = "g1";
             //margin: left: 234, top: 13, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -1052,10 +1072,10 @@ namespace MusicAppAT
             string position = "m1b1and";
             string noteName = "f1";
             //margin: left: 234, top: 20, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -1115,10 +1135,10 @@ namespace MusicAppAT
             string position = "m1b1and";
             string noteName = "e1";
             //margin: left: 234, top: 27, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -1177,10 +1197,10 @@ namespace MusicAppAT
             string position = "m1b1and";
             string noteName = "d1";
             //margin: left: 234, top: 33, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -1239,10 +1259,10 @@ namespace MusicAppAT
             string position = "m1b1and";
             string noteName = "c1";
             //margin: left: 234, top: 13, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -1301,10 +1321,10 @@ namespace MusicAppAT
             string position = "m1b1and";
             string noteName = "b1";
             //margin: left: 234, top: 47, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -1364,10 +1384,10 @@ namespace MusicAppAT
             string position = "m1b1and";
             string noteName = "a1";
             //margin: left: 234, top: 53, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -1426,10 +1446,10 @@ namespace MusicAppAT
             string position = "m1b1and";
             string noteName = "g0";
             //margin: left: 234, top: 59, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -1488,10 +1508,10 @@ namespace MusicAppAT
             string position = "m1b1and";
             string noteName = "f0";
             //margin: left: 234, top: 65, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -1551,10 +1571,10 @@ namespace MusicAppAT
             string position = "m1b2";
             string noteName = "b2";
             //margin: left: 290, top: 1, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -1614,10 +1634,10 @@ namespace MusicAppAT
             string position = "m1b2";
             string noteName = "a2";
             //margin: left: 290, top: 7, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -1677,10 +1697,10 @@ namespace MusicAppAT
             string position = "m1b2";
             string noteName = "g1";
             //margin: left: 290, top: 13, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -1740,10 +1760,10 @@ namespace MusicAppAT
             string position = "m1b2";
             string noteName = "f1";
             //margin: left: 290, top: 20, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -1803,10 +1823,10 @@ namespace MusicAppAT
             string position = "m1b2";
             string noteName = "e1";
             //margin: left: 290, top: 27, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -1865,10 +1885,10 @@ namespace MusicAppAT
             string position = "m1b2";
             string noteName = "d1";
             //margin: left: 290, top: 33, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -1927,10 +1947,10 @@ namespace MusicAppAT
             string position = "m1b2";
             string noteName = "c1";
             //margin: left: 290, top: 40, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -1989,10 +2009,10 @@ namespace MusicAppAT
             string position = "m1b2";
             string noteName = "b1";
             //margin: left: 290, top: 47, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -2052,10 +2072,10 @@ namespace MusicAppAT
             string position = "m1b2";
             string noteName = "a1";
             //margin: left: 290, top: 53, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -2114,10 +2134,10 @@ namespace MusicAppAT
             string position = "m1b2";
             string noteName = "g0";
             //margin: left: 290, top: 59, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -2176,10 +2196,10 @@ namespace MusicAppAT
             string position = "m1b2";
             string noteName = "f0";
             //margin: left: 290, top: 65, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -2239,10 +2259,10 @@ namespace MusicAppAT
             string position = "m1b2and";
             string noteName = "b2";
             //margin: left: 351, top: 1, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -2302,10 +2322,10 @@ namespace MusicAppAT
             string position = "m1b2and";
             string noteName = "a1";
             //margin: left: 351, top: 7, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -2365,10 +2385,10 @@ namespace MusicAppAT
             string position = "m1b2and";
             string noteName = "g1";
             //margin: left: 351, top: 13, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -2428,10 +2448,10 @@ namespace MusicAppAT
             string position = "m1b2and";
             string noteName = "f1";
             //margin: left: 351, top: 20, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -2491,10 +2511,10 @@ namespace MusicAppAT
             string position = "m1b2and";
             string noteName = "e1";
             //margin: left: 351, top: 27, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -2553,10 +2573,10 @@ namespace MusicAppAT
             string position = "m1b2and";
             string noteName = "d1";
             //margin: left: 351, top: 33, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -2615,10 +2635,10 @@ namespace MusicAppAT
             string position = "m1b2and";
             string noteName = "c1";
             //margin: left: 351, top: 40, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -2677,10 +2697,10 @@ namespace MusicAppAT
             string position = "m1b2and";
             string noteName = "b1";
             //margin: left: 351, top: 47, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -2740,10 +2760,10 @@ namespace MusicAppAT
             string position = "m1b2and";
             string noteName = "a1";
             //margin: left: 351, top: 53, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -2802,10 +2822,10 @@ namespace MusicAppAT
             string position = "m1b2and";
             string noteName = "g0";
             //margin: left: 351, top: 59, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -2864,10 +2884,10 @@ namespace MusicAppAT
             string position = "m1b2and";
             string noteName = "f0";
             //margin: left: 351, top: 65, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -2927,10 +2947,10 @@ namespace MusicAppAT
             string position = "m1b3";
             string noteName = "b2";
             //margin: left: 406, top: 1, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -2990,10 +3010,10 @@ namespace MusicAppAT
             string position = "m1b3";
             string noteName = "a2";
             //margin: left: 406, top: 7, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -3053,10 +3073,10 @@ namespace MusicAppAT
             string position = "m1b3";
             string noteName = "g1";
             //margin: left: 406, top: 13, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -3116,10 +3136,10 @@ namespace MusicAppAT
             string position = "m1b3";
             string noteName = "f1";
             //margin: left: 406, top: 20, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -3179,10 +3199,10 @@ namespace MusicAppAT
             string position = "m1b3";
             string noteName = "e1";
             //margin: left: 406, top: 27, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -3241,10 +3261,10 @@ namespace MusicAppAT
             string position = "m1b3";
             string noteName = "d1";
             //margin: left: 406, top: 33, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -3303,10 +3323,10 @@ namespace MusicAppAT
             string position = "m1b3";
             string noteName = "c1";
             //margin: left: 406, top: 40, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -3365,10 +3385,10 @@ namespace MusicAppAT
             string position = "m1b3";
             string noteName = "b1";
             //margin: left: 406, top: 47, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -3428,10 +3448,10 @@ namespace MusicAppAT
             string position = "m1b3";
             string noteName = "a1";
             //margin: left: 406, top: 53, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -3490,10 +3510,10 @@ namespace MusicAppAT
             string position = "m1b3";
             string noteName = "g0";
             //margin: left: 406, top: 59, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -3552,10 +3572,10 @@ namespace MusicAppAT
             string position = "m1b3";
             string noteName = "f0";
             //margin: left: 406, top: 65, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -3615,10 +3635,10 @@ namespace MusicAppAT
             string position = "m1b3and";
             string noteName = "b2";
             //margin: left: 466, top: 1, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -3678,10 +3698,10 @@ namespace MusicAppAT
             string position = "m1b3and";
             string noteName = "a2";
             //margin: left: 466, top: 7, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -3741,10 +3761,10 @@ namespace MusicAppAT
             string position = "m1b3and";
             string noteName = "g1";
             //margin: left: 466, top: 13, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -3804,10 +3824,10 @@ namespace MusicAppAT
             string position = "m1b3and";
             string noteName = "f1";
             //margin: left: 466, top: 20, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -3867,10 +3887,10 @@ namespace MusicAppAT
             string position = "m1b3and";
             string noteName = "e1";
             //margin: left: 466, top: 27, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -3929,10 +3949,10 @@ namespace MusicAppAT
             string position = "m1b3and";
             string noteName = "d1";
             //margin: left: 466, top: 33, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -3991,10 +4011,10 @@ namespace MusicAppAT
             string position = "m1b3and";
             string noteName = "c1";
             //margin: left: 466, top: 40, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -4053,10 +4073,10 @@ namespace MusicAppAT
             string position = "m1b3and";
             string noteName = "b1";
             //margin: left: 466, top: 47, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -4116,10 +4136,10 @@ namespace MusicAppAT
             string position = "m1b3and";
             string noteName = "a1";
             //margin: left: 466, top: 53, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -4178,10 +4198,10 @@ namespace MusicAppAT
             string position = "m1b3and";
             string noteName = "g0";
             //margin: left: 466, top: 59, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -4240,9 +4260,9 @@ namespace MusicAppAT
             string position = "m1b3and";
             string noteName = "f0";
             //margin: left: 466, top: 65, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -4301,10 +4321,10 @@ namespace MusicAppAT
             string position = "m1b4";
             string noteName = "b2";
             //margin: left: 522, top: 1, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -4364,10 +4384,10 @@ namespace MusicAppAT
             string position = "m1b4";
             string noteName = "a2";
             //margin: left: 522, top: 7, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -4427,10 +4447,10 @@ namespace MusicAppAT
             string position = "m1b4";
             string noteName = "g1";
             //margin: left: 522, top: 13, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -4490,10 +4510,10 @@ namespace MusicAppAT
             string position = "m1b4";
             string noteName = "f1";
             //margin: left: 522, top: 20, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -4553,10 +4573,10 @@ namespace MusicAppAT
             string position = "m1b4";
             string noteName = "e1";
             //margin: left: 522, top: 27, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -4615,10 +4635,10 @@ namespace MusicAppAT
             string position = "m1b4";
             string noteName = "d1";
             //margin: left: 522, top: 33, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -4677,10 +4697,10 @@ namespace MusicAppAT
             string position = "m1b4";
             string noteName = "c1";
             //margin: left: 522, top: 40, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -4739,10 +4759,10 @@ namespace MusicAppAT
             string position = "m1b4";
             string noteName = "b1";
             //margin: left: 522, top: 47, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -4802,10 +4822,10 @@ namespace MusicAppAT
             string position = "m1b4";
             string noteName = "a1";
             //margin: left: 522, top: 53, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -4864,10 +4884,10 @@ namespace MusicAppAT
             string position = "m1b4";
             string noteName = "g0";
             //margin: left: 522, top: 59, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -4926,10 +4946,10 @@ namespace MusicAppAT
             string position = "m1b4";
             string noteName = "f0";
             //margin: left: 522, top: 65, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -4989,10 +5009,10 @@ namespace MusicAppAT
             string position = "m1b4and";
             string noteName = "b2";
             //margin: left: 583, top: 1, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -5052,10 +5072,10 @@ namespace MusicAppAT
             string position = "m1b4and";
             string noteName = "a2";
             //margin: left: 583, top: 7, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -5115,10 +5135,10 @@ namespace MusicAppAT
             string position = "m1b4and";
             string noteName = "g1";
             //margin: left: 583, top: 13, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -5178,10 +5198,10 @@ namespace MusicAppAT
             string position = "m1b4and";
             string noteName = "f1";
             //margin: left: 583, top: 20, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -5241,10 +5261,10 @@ namespace MusicAppAT
             string position = "m1b4and";
             string noteName = "e1";
             //margin: left: 583, top: 27, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -5303,10 +5323,10 @@ namespace MusicAppAT
             string position = "m1b4and";
             string noteName = "d1";
             //margin: left: 583, top: 33, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -5365,10 +5385,10 @@ namespace MusicAppAT
             string position = "m1b4and";
             string noteName = "c1";
             //margin: left: 583, top: 40, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -5427,10 +5447,10 @@ namespace MusicAppAT
             string position = "m1b4and";
             string noteName = "b1";
             //margin: left: 583, top: 47, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -5490,10 +5510,10 @@ namespace MusicAppAT
             string position = "m1b4and";
             string noteName = "a1";
             //margin: left: 583, top: 53, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -5552,10 +5572,10 @@ namespace MusicAppAT
             string position = "m1b4and";
             string noteName = "g0";
             //margin: left: 583, top: 59, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -5614,10 +5634,10 @@ namespace MusicAppAT
             string position = "m1b4and";
             string noteName = "f0";
             //margin: left: 583, top: 65, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -5676,10 +5696,10 @@ namespace MusicAppAT
             string position = "m2b1";
             string noteName = "b2";
             //margin: left: 174, top: 138, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -5739,10 +5759,10 @@ namespace MusicAppAT
             string position = "m2b1";
             string noteName = "a2";
             //margin: left: 174, top: 144, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -5802,10 +5822,10 @@ namespace MusicAppAT
             string position = "m2b1";
             string noteName = "g1";
             //margin: left: 174, top: 150, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -5865,10 +5885,10 @@ namespace MusicAppAT
             string position = "m2b1";
             string noteName = "f1";
             //margin: left: 174, top: 157, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -5928,10 +5948,10 @@ namespace MusicAppAT
             string position = "m2b1";
             string noteName = "e1";
             //margin: left: 174, top: 164, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -5990,10 +6010,10 @@ namespace MusicAppAT
             string position = "m2b1";
             string noteName = "d1";
             //margin: left: 174, top: 170, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -6052,9 +6072,9 @@ namespace MusicAppAT
             string position = "m2b1";
             string noteName = "c1";
             //margin: left: 174, top: 177, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -6113,10 +6133,10 @@ namespace MusicAppAT
             string position = "m2b1";
             string noteName = "b1";
             //margin: left: 174, top: 184, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -6176,10 +6196,10 @@ namespace MusicAppAT
             string position = "m2b1";
             string noteName = "a1";
             //margin: left: 174, top: 190, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -6238,10 +6258,10 @@ namespace MusicAppAT
             string position = "m2b1";
             string noteName = "g0";
             //margin: left: 174, top: 196, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -6300,10 +6320,10 @@ namespace MusicAppAT
             string position = "m2b1";
             string noteName = "f0";
             //margin: left: 174, top: 202, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -6363,10 +6383,10 @@ namespace MusicAppAT
             string position = "m2b1and";
             string noteName = "b2";
             //margin: left: 234, top: 138, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -6426,10 +6446,10 @@ namespace MusicAppAT
             string position = "m2b1and";
             string noteName = "a2";
             //margin: left: 234, top: 144, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -6489,10 +6509,10 @@ namespace MusicAppAT
             string position = "m2b1and";
             string noteName = "g1";
             //margin: left: 234, top: 150, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -6552,10 +6572,10 @@ namespace MusicAppAT
             string position = "m2b1and";
             string noteName = "f1";
             //margin: left: 234, top: 157, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -6615,10 +6635,10 @@ namespace MusicAppAT
             string position = "m2b1and";
             string noteName = "e1";
             //margin: left: 234, top: 164, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -6677,10 +6697,10 @@ namespace MusicAppAT
             string position = "m2b1and";
             string noteName = "d1";
             //margin: left: 234, top: 170, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -6739,10 +6759,10 @@ namespace MusicAppAT
             string position = "m2b1and";
             string noteName = "c1";
             //margin: left: 234, top: 177, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -6801,10 +6821,10 @@ namespace MusicAppAT
             string position = "m2b1and";
             string noteName = "b1";
             //margin: left: 234, top: 184, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -6864,10 +6884,10 @@ namespace MusicAppAT
             string position = "m2b1and";
             string noteName = "a1";
             //margin: left: 234, top: 190, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -6926,10 +6946,10 @@ namespace MusicAppAT
             string position = "m2b1and";
             string noteName = "g0";
             //margin: left: 234, top: 196, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -6988,9 +7008,9 @@ namespace MusicAppAT
             string position = "m2b1and";
             string noteName = "f0";
             //margin: left: 234, top: 202, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -7050,10 +7070,10 @@ namespace MusicAppAT
             string position = "m2b2";
             string noteName = "b2";
             //margin: left: 290, top: 138, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -7113,10 +7133,10 @@ namespace MusicAppAT
             string position = "m2b2";
             string noteName = "a2";
             //margin: left: 290, top: 144, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -7176,10 +7196,10 @@ namespace MusicAppAT
             string position = "m2b2";
             string noteName = "g1";
             //margin: left: 290, top: 150, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -7239,10 +7259,10 @@ namespace MusicAppAT
             string position = "m2b2";
             string noteName = "f1";
             //margin: left: 290, top: 157, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -7302,10 +7322,10 @@ namespace MusicAppAT
             string position = "m2b2";
             string noteName = "e1";
             //margin: left: 290, top: 164, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -7364,10 +7384,10 @@ namespace MusicAppAT
             string position = "m2b2";
             string noteName = "d1";
             //margin: left: 290, top: 170, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -7426,10 +7446,10 @@ namespace MusicAppAT
             string position = "m2b2";
             string noteName = "c1";
             //margin: left: 290, top: 177, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -7488,10 +7508,10 @@ namespace MusicAppAT
             string position = "m2b2";
             string noteName = "b1";
             //margin: left: 290, top: 184, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -7551,10 +7571,10 @@ namespace MusicAppAT
             string position = "m2b2";
             string noteName = "a1";
             //margin: left: 290, top: 190, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -7613,10 +7633,10 @@ namespace MusicAppAT
             string position = "m2b2";
             string noteName = "g0";
             //margin: left: 290, top: 196, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -7675,10 +7695,10 @@ namespace MusicAppAT
             string position = "m2b2";
             string noteName = "f0";
             //margin: left: 290, top: 202, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -7738,10 +7758,10 @@ namespace MusicAppAT
             string position = "m2b2and";
             string noteName = "b2";
             //margin: left: 351, top: 138, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -7801,10 +7821,10 @@ namespace MusicAppAT
             string position = "m2b2and";
             string noteName = "a2";
             //margin: left: 351, top: 144, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -7864,10 +7884,10 @@ namespace MusicAppAT
             string position = "m2b2and";
             string noteName = "g1";
             //margin: left: 351, top: 150, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -7927,10 +7947,10 @@ namespace MusicAppAT
             string position = "m2b2and";
             string noteName = "f1";
             //margin: left: 351, top: 157, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -7990,10 +8010,10 @@ namespace MusicAppAT
             string position = "m2b2and";
             string noteName = "e1";
             //margin: left: 351, top: 164, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -8052,10 +8072,10 @@ namespace MusicAppAT
             string position = "m2b2and";
             string noteName = "d1";
             //margin: left: 351, top: 170, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
+            
+            
 
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -8113,9 +8133,9 @@ namespace MusicAppAT
             string position = "m2b2and";
             string noteName = "c1";
             //margin: left: 351, top: 177, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
 
             if (length == 4)
             {
@@ -8174,13 +8194,13 @@ namespace MusicAppAT
             string position = "m2b2and";
             string noteName = "b1";
             //margin: left: 351, top: 184, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar1pb4.Margin;
-                margin.Left = 406;
+                margin.Left = 351;
                 margin.Top = 184;
                 m2bar1pb4.Margin = margin;
                 Image finalImage = new Image();
@@ -8190,7 +8210,7 @@ namespace MusicAppAT
             else if (length == 3)
             {
                 Thickness margin = m2bar1pb4.Margin;
-                margin.Left = 406;
+                margin.Left = 351;
                 margin.Top = 184;
                 m2bar1pb4.Margin = margin;
                 Image finalImage = new Image();
@@ -8200,7 +8220,7 @@ namespace MusicAppAT
             else if (length == 2)
             {
                 Thickness margin = m2bar1pb4.Margin;
-                margin.Left = 406;
+                margin.Left = 351;
                 margin.Top = 184;
                 m2bar1pb4.Margin = margin;
                 Image finalImage = new Image();
@@ -8210,7 +8230,7 @@ namespace MusicAppAT
             else if (length == 1.5)
             {
                 Thickness margin = m2bar1pb4.Margin;
-                margin.Left = 406;
+                margin.Left = 351;
                 margin.Top = 184;
                 m2bar1pb4.Margin = margin;
                 Image finalImage = new Image();
@@ -8220,7 +8240,7 @@ namespace MusicAppAT
             else if (length == 1)
             {
                 Thickness margin = m2bar1pb4.Margin;
-                margin.Left = 406;
+                margin.Left = 351;
                 margin.Top = 184;
                 m2bar1pb4.Margin = margin;
                 Image finalImage = new Image();
@@ -8234,13 +8254,13 @@ namespace MusicAppAT
             string position = "m2b2and";
             string noteName = "a1";
             //margin: left: 351, top: 190, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar1pb4.Margin;
-                margin.Left = 406;
+                margin.Left = 351;
                 margin.Top = 190;
                 m2bar1pb4.Margin = margin;
                 Image finalImage = new Image();
@@ -8250,7 +8270,7 @@ namespace MusicAppAT
             else if (length == 3)
             {
                 Thickness margin = m2bar1pb4.Margin;
-                margin.Left = 406;
+                margin.Left = 351;
                 margin.Top = 190;
                 m2bar1pb4.Margin = margin;
                 Image finalImage = new Image();
@@ -8260,7 +8280,7 @@ namespace MusicAppAT
             else if (length == 2)
             {
                 Thickness margin = m2bar1pb4.Margin;
-                margin.Left = 406;
+                margin.Left = 351;
                 margin.Top = 190;
                 m2bar1pb4.Margin = margin;
                 Image finalImage = new Image();
@@ -8270,7 +8290,7 @@ namespace MusicAppAT
             else if (length == 1.5)
             {
                 Thickness margin = m2bar1pb4.Margin;
-                margin.Left = 406;
+                margin.Left = 351;
                 margin.Top = 190;
                 m2bar1pb4.Margin = margin;
                 Image finalImage = new Image();
@@ -8280,7 +8300,7 @@ namespace MusicAppAT
             else if (length == 1)
             {
                 Thickness margin = m2bar1pb4.Margin;
-                margin.Left = 406;
+                margin.Left = 351;
                 margin.Top = 190;
                 m2bar1pb4.Margin = margin;
                 Image finalImage = new Image();
@@ -8294,13 +8314,13 @@ namespace MusicAppAT
             string position = "m2b2and";
             string noteName = "g0";
             //margin: left: 351, top: 196, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar1pb4.Margin;
-                margin.Left = 406;
+                margin.Left = 351;
                 margin.Top = 196;
                 m2bar1pb4.Margin = margin;
                 Image finalImage = new Image();
@@ -8310,7 +8330,7 @@ namespace MusicAppAT
             else if (length == 3)
             {
                 Thickness margin = m2bar1pb4.Margin;
-                margin.Left = 406;
+                margin.Left = 351;
                 margin.Top = 196;
                 m2bar1pb4.Margin = margin;
                 Image finalImage = new Image();
@@ -8320,7 +8340,7 @@ namespace MusicAppAT
             else if (length == 2)
             {
                 Thickness margin = m2bar1pb4.Margin;
-                margin.Left = 406;
+                margin.Left = 351;
                 margin.Top = 196;
                 m2bar1pb4.Margin = margin;
                 Image finalImage = new Image();
@@ -8330,7 +8350,7 @@ namespace MusicAppAT
             else if (length == 1.5)
             {
                 Thickness margin = m2bar1pb4.Margin;
-                margin.Left = 406;
+                margin.Left = 351;
                 margin.Top = 196;
                 m2bar1pb4.Margin = margin;
                 Image finalImage = new Image();
@@ -8340,7 +8360,7 @@ namespace MusicAppAT
             else if (length == 1)
             {
                 Thickness margin = m2bar1pb4.Margin;
-                margin.Left = 406;
+                margin.Left = 351;
                 margin.Top = 196;
                 m2bar1pb4.Margin = margin;
                 Image finalImage = new Image();
@@ -8354,13 +8374,13 @@ namespace MusicAppAT
             string position = "m2b2and";
             string noteName = "f0";
             //margin: left: 351, top: 202, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar1pb4.Margin;
-                margin.Left = 406;
+                margin.Left = 351;
                 margin.Top = 202;
                 m2bar1pb4.Margin = margin;
                 Image finalImage = new Image();
@@ -8370,7 +8390,7 @@ namespace MusicAppAT
             else if (length == 3)
             {
                 Thickness margin = m2bar1pb4.Margin;
-                margin.Left = 406;
+                margin.Left = 351;
                 margin.Top = 202;
                 m2bar1pb4.Margin = margin;
                 Image finalImage = new Image();
@@ -8380,7 +8400,7 @@ namespace MusicAppAT
             else if (length == 2)
             {
                 Thickness margin = m2bar1pb4.Margin;
-                margin.Left = 406;
+                margin.Left = 351;
                 margin.Top = 202;
                 m2bar1pb4.Margin = margin;
                 Image finalImage = new Image();
@@ -8390,7 +8410,7 @@ namespace MusicAppAT
             else if (length == 1.5)
             {
                 Thickness margin = m2bar1pb4.Margin;
-                margin.Left = 406;
+                margin.Left = 351;
                 margin.Top = 202;
                 m2bar1pb4.Margin = margin;
                 Image finalImage = new Image();
@@ -8400,7 +8420,7 @@ namespace MusicAppAT
             else if (length == 1)
             {
                 Thickness margin = m2bar1pb4.Margin;
-                margin.Left = 406;
+                margin.Left = 351;
                 margin.Top = 202;
                 m2bar1pb4.Margin = margin;
                 Image finalImage = new Image();
@@ -8414,9 +8434,9 @@ namespace MusicAppAT
             string position = "m2b3";
             string noteName = "b2";
             //margin: left: 406, top: 138, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb1.Margin;
@@ -8474,9 +8494,9 @@ namespace MusicAppAT
             string position = "m2b3";
             string noteName = "a2";
             //margin: left: 406, top: 144, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb1.Margin;
@@ -8534,9 +8554,9 @@ namespace MusicAppAT
             string position = "m2b3";
             string noteName = "g1";
             //margin: left: 406, top: 150, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb1.Margin;
@@ -8594,9 +8614,9 @@ namespace MusicAppAT
             string position = "m2b3";
             string noteName = "f1";
             //margin: left: 406, top: 157, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb1.Margin;
@@ -8654,9 +8674,9 @@ namespace MusicAppAT
             string position = "m2b3";
             string noteName = "e1";
             //margin: left: 406, top: 164, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb1.Margin;
@@ -8714,9 +8734,8 @@ namespace MusicAppAT
             string position = "m2b3";
             string noteName = "d1";
             //margin: left: 406, top: 170, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]);   } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb1.Margin;
@@ -8774,9 +8793,9 @@ namespace MusicAppAT
             string position = "m2b3";
             string noteName = "c1";
             //margin: left: 406, top: 177, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb1.Margin;
@@ -8834,9 +8853,9 @@ namespace MusicAppAT
             string position = "m2b3";
             string noteName = "b1";
             //margin: left: 406, top: 184, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb1.Margin;
@@ -8894,9 +8913,9 @@ namespace MusicAppAT
             string position = "m2b3";
             string noteName = "a1";
             //margin: left: 406, top: 190, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb1.Margin;
@@ -8954,9 +8973,9 @@ namespace MusicAppAT
             string position = "m2b3";
             string noteName = "g0";
             //margin: left: 406, top: 196, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb1.Margin;
@@ -9014,9 +9033,9 @@ namespace MusicAppAT
             string position = "m2b3";
             string noteName = "f0";
             //margin: left: 406, top: 202, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb1.Margin;
@@ -9074,9 +9093,9 @@ namespace MusicAppAT
             string position = "m2b3and";
             string noteName = "b2";
             //margin: left: 466, top: 138, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb2.Margin;
@@ -9134,9 +9153,9 @@ namespace MusicAppAT
             string position = "m2b3and";
             string noteName = "a2";
             //margin: left: 466, top: 144, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb2.Margin;
@@ -9194,9 +9213,9 @@ namespace MusicAppAT
             string position = "m2b3and";
             string noteName = "g1";
             //margin: left: 466, top: 153, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb2.Margin;
@@ -9254,9 +9273,9 @@ namespace MusicAppAT
             string position = "m2b3and";
             string noteName = "f1";
             //margin: left: 466, top: 157, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb2.Margin;
@@ -9314,9 +9333,9 @@ namespace MusicAppAT
             string position = "m2b3and";
             string noteName = "e1";
             //margin: left: 466, top: 164, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb2.Margin;
@@ -9374,9 +9393,9 @@ namespace MusicAppAT
             string position = "m2b3and";
             string noteName = "d1";
             //margin: left: 466, top: 170, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb2.Margin;
@@ -9434,9 +9453,9 @@ namespace MusicAppAT
             string position = "m2b3and";
             string noteName = "c1";
             //margin: left: 466, top: 177, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb2.Margin;
@@ -9494,9 +9513,9 @@ namespace MusicAppAT
             string position = "m2b3and";
             string noteName = "b1";
             //margin: left: 466, top: 184, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb2.Margin;
@@ -9554,9 +9573,9 @@ namespace MusicAppAT
             string position = "m2b3and";
             string noteName = "a1";
             //margin: left: 466, top: 190, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb2.Margin;
@@ -9614,9 +9633,9 @@ namespace MusicAppAT
             string position = "m2b3and";
             string noteName = "g0";
             //margin: left: 466, top: 196, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb2.Margin;
@@ -9674,9 +9693,9 @@ namespace MusicAppAT
             string position = "m2b3and";
             string noteName = "f0";
             //margin: left: 466, top: 202, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb2.Margin;
@@ -9734,9 +9753,9 @@ namespace MusicAppAT
             string position = "m2b4";
             string noteName = "b2";
             //margin: left: 522, top: 138, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb3.Margin;
@@ -9794,9 +9813,9 @@ namespace MusicAppAT
             string position = "m2b4";
             string noteName = "a2";
             //margin: left: 522, top: 144, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb3.Margin;
@@ -9854,9 +9873,9 @@ namespace MusicAppAT
             string position = "m2b4";
             string noteName = "g1";
             //margin: left: 522, top: 153, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb3.Margin;
@@ -9914,9 +9933,9 @@ namespace MusicAppAT
             string position = "m2b4";
             string noteName = "f1";
             //margin: left: 522, top: 157, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb3.Margin;
@@ -9974,9 +9993,9 @@ namespace MusicAppAT
             string position = "m2b4";
             string noteName = "e1";
             //margin: left: 522, top: 164, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb3.Margin;
@@ -10034,9 +10053,9 @@ namespace MusicAppAT
             string position = "m2b4";
             string noteName = "d1";
             //margin: left: 522, top: 170, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb3.Margin;
@@ -10094,9 +10113,9 @@ namespace MusicAppAT
             string position = "m2b4";
             string noteName = "c1";
             //margin: left: 522, top: 177, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb3.Margin;
@@ -10154,9 +10173,9 @@ namespace MusicAppAT
             string position = "m2b4";
             string noteName = "b1";
             //margin: left: 522, top: 184, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb3.Margin;
@@ -10214,9 +10233,9 @@ namespace MusicAppAT
             string position = "m2b4";
             string noteName = "a1";
             //margin: left: 522, top: 190, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb3.Margin;
@@ -10274,9 +10293,9 @@ namespace MusicAppAT
             string position = "m2b4";
             string noteName = "g0";
             //margin: left: 522, top: 196, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb3.Margin;
@@ -10334,9 +10353,9 @@ namespace MusicAppAT
             string position = "m2b4";
             string noteName = "f0";
             //margin: left: 522, top: 202, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb3.Margin;
@@ -10394,9 +10413,9 @@ namespace MusicAppAT
             string position = "m2b4and";
             string noteName = "b2";
             //margin: left: 583, top: 138, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb4.Margin;
@@ -10454,9 +10473,9 @@ namespace MusicAppAT
             string position = "m2b4and";
             string noteName = "a2";
             //margin: left: 583, top: 144, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb4.Margin;
@@ -10514,9 +10533,9 @@ namespace MusicAppAT
             string position = "m2b4and";
             string noteName = "g1";
             //margin: left: 583, top: 153, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb4.Margin;
@@ -10574,9 +10593,9 @@ namespace MusicAppAT
             string position = "m2b4and";
             string noteName = "f1";
             //margin: left: 583, top: 157, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb4.Margin;
@@ -10634,9 +10653,9 @@ namespace MusicAppAT
             string position = "m2b4and";
             string noteName = "e1";
             //margin: left: 583, top: 164, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb4.Margin;
@@ -10694,9 +10713,9 @@ namespace MusicAppAT
             string position = "m2b4and";
             string noteName = "d1";
             //margin: left: 583, top: 170, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb4.Margin;
@@ -10754,9 +10773,9 @@ namespace MusicAppAT
             string position = "m2b4and";
             string noteName = "c1";
             //margin: left: 583, top: 177, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb4.Margin;
@@ -10814,9 +10833,9 @@ namespace MusicAppAT
             string position = "m2b4and";
             string noteName = "b1";
             //margin: left: 583, top: 184, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb4.Margin;
@@ -10874,9 +10893,9 @@ namespace MusicAppAT
             string position = "m2b4and";
             string noteName = "a1";
             //margin: left: 583, top: 190, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb4.Margin;
@@ -10934,9 +10953,9 @@ namespace MusicAppAT
             string position = "m2b4and";
             string noteName = "g0";
             //margin: left: 583, top: 196, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb4.Margin;
@@ -10994,9 +11013,9 @@ namespace MusicAppAT
             string position = "m2b4and";
             string noteName = "f0";
             //margin: left: 583, top: 202, right: 0, bottom: 0
-            notes[numOfNotes, 1] = position;
-            notes[numOfNotes, 2] = noteName;
-            double length = Double.Parse(notes[numOfNotes, 0]);
+            
+            
+            double length = 0.0;try{length = Double.Parse(notes[numOfNotes, 0]); notes[numOfNotes, 2] = noteName; notes[numOfNotes, 1] = position; } catch(Exception ex){}
             if (length == 4)
             {
                 Thickness margin = m2bar2pb4.Margin;
@@ -11050,6 +11069,24 @@ namespace MusicAppAT
             numOfNotes++;
         }
 
+        public async void PlayMusic()
+        {
+            for (int i = 0; i <= notes.GetLength(0) - 1; i++)
+            {
+                double delay = 0;
+                try
+                {
+                    delay = double.Parse(notes[i, 0]) * 1000 * 2;
+                } catch (Exception ex)
+                {
+                    break;
+                }
+                int intdelay = (int)Math.Round(delay);
+                SoundPlayer player;
+                try { player = new SoundPlayer(GetExeDirSubPath("../../References/SeparatedSoundFiles/" + notes[i, 2].ToUpper() + ".wav")); player.Load(); player.PlayLooping(); await Task.Delay(intdelay); player.Stop(); } catch (Exception ex) { player = new SoundPlayer(GetExeDirSubPath("../../References/SeparatedSoundFiles/d1.wav")); player.Load(); player.PlayLooping(); await Task.Delay(intdelay); player.Stop(); }
+            }
+        }
+
         private void play_Click(object sender, RoutedEventArgs e)
         {
             PlayMusic();
@@ -11058,7 +11095,25 @@ namespace MusicAppAT
 
         private void reset_Click(object sender, RoutedEventArgs e)
         {
-
+            m1bar1pb1.Source = null;
+            m1bar1pb2.Source = null;
+            m1bar1pb3.Source = null;
+            m1bar1pb4.Source = null;
+            m1bar2pb1.Source = null;
+            m1bar2pb2.Source = null;
+            m1bar2pb3.Source = null;
+            m1bar2pb4.Source = null;
+            m2bar1pb1.Source = null;
+            m2bar1pb2.Source = null;
+            m2bar1pb3.Source = null;
+            m2bar1pb4.Source = null;
+            m2bar2pb1.Source = null;
+            m2bar2pb2.Source = null;
+            m2bar2pb3.Source = null;
+            m2bar2pb4.Source = null;
+            int fullLength = notes.GetLength(0) + notes.GetLength(1);
+            Array.Clear(notes, 0, fullLength);
+            numOfNotes = 0;
         }
     }
 }
