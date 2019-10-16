@@ -25,6 +25,10 @@ namespace MusicAppAT
     /// </summary>
     public partial class MainWindow : Window
     {
+        int numOfNotes = 0;
+
+        string[,] notes = new string[16, 3];
+
         public MainWindow()
         {
             InitializeComponent();
@@ -96,9 +100,12 @@ namespace MusicAppAT
             
         }
 
+        
+
         private void whole_Click(object sender, RoutedEventArgs e)
         {
             double length = 4;
+            notes[numOfNotes, 0] = length.ToString();
         }
         private void dothalf_Click(object sender, RoutedEventArgs e)
         {
@@ -125,6 +132,9 @@ namespace MusicAppAT
             string position = "m1b1";
             string noteName = "b2";
             //margin: left: 175, top: 4, right: 0, bottom: 0
+            notes[numOfNotes, 1] = position;
+            notes[numOfNotes, 2] = noteName;
+            numOfNotes++;
         }
 
         private void m1b1a2_Click(object sender, EventArgs e)
