@@ -16,6 +16,8 @@ using System.Windows.Resources;
 using System.Runtime.InteropServices;
 using Microsoft.Win32.SafeHandles;
 
+using MusicAppAT.ViewModels;
+
 namespace MusicAppAT
 {
     /// <summary>
@@ -71,36 +73,81 @@ namespace MusicAppAT
             
         }
 
-        private void whole_Click(object sender, RoutedEventArgs e)
+        private void Whole_Click(object sender, RoutedEventArgs e)
         {
             double length = 4;
 
-            
+            // lighten selected button
+            wholeNote.Background = Brushes.LightGray;
+
+            // darkening buttons
+            dothalfNote.Background = Brushes.DarkGray;
+            halfNote.Background = Brushes.DarkGray;
+            dotquarterNote.Background = Brushes.DarkGray;
+            quarterNote.Background = Brushes.DarkGray;
         }
-        private void dothalf_Click(object sender, RoutedEventArgs e)
+        private void Dothalf_Click(object sender, RoutedEventArgs e)
         {
             double length = 3;
+
+            // lighten selected button
+            dothalfNote.Background = Brushes.LightGray;
+
+            // darkening buttons
+            wholeNote.Background = Brushes.DarkGray;
+            halfNote.Background = Brushes.DarkGray;
+            dotquarterNote.Background = Brushes.DarkGray;
+            quarterNote.Background = Brushes.DarkGray;
         }
 
-        private void half_Click(object sender, RoutedEventArgs e)
+        private void Half_Click(object sender, RoutedEventArgs e)
         {
             double length = 2;
+
+            // lighten selected button
+            halfNote.Background = Brushes.LightGray;
+
+            // darkening buttons
+            wholeNote.Background = Brushes.DarkGray;
+            dothalfNote.Background = Brushes.DarkGray;
+            dotquarterNote.Background = Brushes.DarkGray;
+            quarterNote.Background = Brushes.DarkGray;
         }
 
-        private void dotquarter_Click(object sender, RoutedEventArgs e)
+        private void Dotquarter_Click(object sender, RoutedEventArgs e)
         {
             double length = 1.5;
+
+            // lighten selected button
+            dotquarterNote.Background = Brushes.LightGray;
+
+            // darkening buttons
+            wholeNote.Background = Brushes.DarkGray;
+            dothalfNote.Background = Brushes.DarkGray;
+            halfNote.Background = Brushes.DarkGray;
+            quarterNote.Background = Brushes.DarkGray;
         }
 
-        private void quarter_Click(object sender, RoutedEventArgs e)
+        private void Quarter_Click(object sender, RoutedEventArgs e)
         {
             double length = 1;
+
+            // lighten selected button
+            quarterNote.Background = Brushes.LightGray;
+
+            // darkening buttons
+            wholeNote.Background = Brushes.DarkGray;
+            dothalfNote.Background = Brushes.DarkGray;
+            halfNote.Background = Brushes.DarkGray;
+            dotquarterNote.Background = Brushes.DarkGray;
         }
 
         private void m1b1b2_Click(object sender, EventArgs e)
         {
             string position = "m1b1";
             string noteName = "b2";
+
+            //Note newNote = new Note(position, noteL, noteName);
         }
 
         private void m1b1a2_Click(object sender, EventArgs e)
@@ -1068,30 +1115,6 @@ namespace MusicAppAT
         {
             string position = "m2b4and";
             string noteName = "f0";
-        }
-
-        private void whole_Click(object sender, RoutedEventArgs e)
-        {
-            double length = 4;
-        }
-        private void dothalf_Click(object sender, RoutedEventArgs e)
-        {
-            double length = 3;
-        }
-
-        private void half_Click(object sender, RoutedEventArgs e)
-        {
-            double length = 2;
-        }
-
-        private void dotquarter_Click(object sender, RoutedEventArgs e)
-        {
-            double length = 1.5;
-        }
-
-        private void quarter_Click(object sender, RoutedEventArgs e)
-        {
-            double length = 1;
         }
 
         private async void play_Click(object sender, RoutedEventArgs e)
